@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/index','FrontController@index')->name('index');
+Route::get('/','FrontController@index')->name('index');
 Route::get('/about','FrontController@about')->name('about');
 Route::get('/contact','FrontController@contact')->name('contact');
