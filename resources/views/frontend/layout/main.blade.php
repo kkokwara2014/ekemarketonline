@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title> @yield('title','Eke Market Online')</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/open-iconic-bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/animate.css')}}">
-    
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/magnific-popup.css')}}">
-
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/aos.css')}}">
-
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/ionicons.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/jquery.timepicker.css')}}">
-
-    
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{asset('bootstrap_assets/css/style.css')}}">
-  </head>
+@include('frontend.layout.header')
   <body class="goto-here">
-
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-
+	
+	@include('frontend.layout.navbar')
+		
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
 	      <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
@@ -180,7 +147,7 @@
     		<div class="row">
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-1.jpg"')}} alt="Colorlib Template">
     						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
@@ -209,7 +176,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-2.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-2.jpg"')}} alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -237,7 +204,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-3.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-3.jpg"')}} alt="Colorlib Template">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -265,7 +232,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-4.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-4.jpg"')}} alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -295,7 +262,7 @@
 
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-5.jpg"')}} alt="Colorlib Template">
     						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
@@ -324,7 +291,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-6.jpg"')}} alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -352,7 +319,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-7.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-7.jpg"')}} alt="Colorlib Template">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -380,7 +347,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-8.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('bootstrap_assets/images/product-8.jpg"')}} alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
