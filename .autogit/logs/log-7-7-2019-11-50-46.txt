@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 07 2019 11:50:46 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* resources/views/frontend/items.blade.php
+* resources/views/frontend/layout/main.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
