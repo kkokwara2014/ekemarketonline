@@ -5,15 +5,15 @@
                 <div class="row d-flex">
                     <div class="col-md pr-4 d-flex topper align-items-center">
                         <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                        <span class="text">+ 1235 2355 98</span>
+                        <span class="text">+ 234 813 888 3919</span>
                     </div>
                     <div class="col-md pr-4 d-flex topper align-items-center">
                         <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
                         <span class="text">services@ekemarketonline.com</span>
                     </div>
-                    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                    {{-- <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                         <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -39,8 +39,7 @@
             <a class="dropdown-item" href="checkout.html">Checkout</a>
           </div>
         </li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About</a></li>
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
           <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
