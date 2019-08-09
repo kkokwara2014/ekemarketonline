@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-    <strong>Copyright &copy; 2015- {{ Carbon\carbon::now()->year }} ekemarketonline.com</strong> All rights
+    <strong>Copyright &copy; 2018- {{ Carbon\carbon::now()->year }} ekemarketonline.com</strong> All rights
     reserved.
     <div class="pull-right">Powered by Done-Right Systems Inc.</div>
   </footer>
