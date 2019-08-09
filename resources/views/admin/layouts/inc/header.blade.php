@@ -108,7 +108,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            {{ $pageTitle }}
+            {{ $pageTitle[0] }}
             <small>Control panel</small>
           </h1>
           {{-- <ol class="breadcrumb">

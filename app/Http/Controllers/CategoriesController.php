@@ -23,7 +23,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $data['pageTitle']='Add Category';
+        $data['pageTitle']=['Add Category'];
         return view('admin.category.create',compact($data));
     }
 

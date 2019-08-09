@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        $data['pageTitle']='Dashboard';
+        $data['pageTitle']=['Dashboard'];
         return view('admin.index',compact($data));
     }
 }

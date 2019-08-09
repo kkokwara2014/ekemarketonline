@@ -23,7 +23,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        $data['pageTitle']='Add Item';
+        $data['pageTitle']=['Add Item'];
         return view('admin.item.create',compact($data));
     }
 
