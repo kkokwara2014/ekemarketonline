@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 09 2019 12:39:40 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/LoginController.php
+* resources/views/admin/index.blade.php
+* resources/views/admin/layouts/inc/footer.blade.php
+* resources/views/admin/layouts/inc/header.blade.php
+* routes/web.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
