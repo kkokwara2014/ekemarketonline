@@ -68,8 +68,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                  <span
-                    class="hidden-xs">{{ ucfirst(Auth::user()->name) }}</span>
+                  <span class="hidden-xs">{{ ucfirst(Auth::user()->name) }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -90,7 +89,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -109,11 +108,11 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Dashboard
+            {{ $pageTitle }}
             <small>Control panel</small>
           </h1>
-          <ol class="breadcrumb">
+          {{-- <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Dashboard</li>
-          </ol>
+          </ol> --}}
         </section>
