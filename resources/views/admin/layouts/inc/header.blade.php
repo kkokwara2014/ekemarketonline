@@ -52,7 +52,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
+          <span class="logo-lg"><b>Ekemarket</b>Online</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -77,8 +77,8 @@
                     <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                     <p>
-                      {{ ucfirst(Auth::user()->name) }} - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      {{ ucfirst(Auth::user()->name) }} - Admin
+                      <small>Member since {{Auth::user()->created_at->format('d M Y')}}</small>
                     </p>
                   </li>
                   <!-- Menu Body -->
@@ -90,7 +90,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
