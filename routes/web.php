@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/','FrontController@index')->name('index');
 Route::get('/about','FrontController@about')->name('about');
 Route::get('/contact','FrontController@contact')->name('contact');
+
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
+    Route::get('/','AdminController@index')->name('admin.index');
+});
