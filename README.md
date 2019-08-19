@@ -1,2 +1,2 @@
 # ekemarketonline
-Giving Eke Market an online presence
+Giving Eke Market Afikpo an online presence
