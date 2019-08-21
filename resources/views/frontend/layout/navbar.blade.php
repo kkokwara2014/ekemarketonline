@@ -32,16 +32,40 @@
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
           <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="shop.html">Shop</a>
-              <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-            <a class="dropdown-item" href="product-single.html">Single Product</a>
-            <a class="dropdown-item" href="cart.html">Cart</a>
-            <a class="dropdown-item" href="checkout.html">Checkout</a>
+            <div class="row">
+              <div class="col-md-4">
+                  <a class="dropdown-item" href="shop.html">
+                      <h5>Wears</h5>
+                  </a>
+                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                  <a class="dropdown-item" href="product-single.html">Single Product</a>
+                  <a class="dropdown-item" href="cart.html">Cart</a>
+                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+              <div class="col-md-4">
+                  <a class="dropdown-item" href="shop.html">
+                      <h5>Electronics</h5>
+                  </a>
+                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                  <a class="dropdown-item" href="product-single.html">Single Product</a>
+                  <a class="dropdown-item" href="cart.html">Cart</a>
+                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+              <div class="col-md-4">
+                  <a class="dropdown-item" href="shop.html">
+                      <h5>Vegetable</h5>
+                  </a>
+                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                  <a class="dropdown-item" href="product-single.html">Single Product</a>
+                  <a class="dropdown-item" href="cart.html">Cart</a>
+                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </div>
           </div>
         </li>
           <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About</a></li>
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
-          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+          <li class="nav-item cta cta-colored"><a href="{{route('cart')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
         </ul>
       </div>
