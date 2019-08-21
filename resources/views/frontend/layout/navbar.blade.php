@@ -30,35 +30,35 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="{{ route('index') }}" class="nav-link">Home</a></li>
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+          <a class="nav-link dropdown-toggle" href="{{route('shop')}}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
           <div class="dropdown-menu" aria-labelledby="dropdown04">
             <div class="row">
               <div class="col-md-4">
                   <a class="dropdown-item" href="shop.html">
                       <h5>Wears</h5>
                   </a>
-                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                  <a class="dropdown-item" href="product-single.html">Single Product</a>
-                  <a class="dropdown-item" href="cart.html">Cart</a>
-                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+                  <a class="dropdown-item" href="{{route('wishlist')}}">Wishlist</a>
+                  <a class="dropdown-item" href="{{route('product')}}">Single Product</a>
+                  <a class="dropdown-item" href="{{route('cart')}}">Cart</a>
+                  <a class="dropdown-item" href="{{route('checkout')}}">Checkout</a>
               </div>
               <div class="col-md-4">
                   <a class="dropdown-item" href="shop.html">
                       <h5>Electronics</h5>
                   </a>
-                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                  <a class="dropdown-item" href="product-single.html">Single Product</a>
-                  <a class="dropdown-item" href="cart.html">Cart</a>
-                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+                  <a class="dropdown-item" href="{{route('wishlist')}}">Wishlist</a>
+                  <a class="dropdown-item" href="{{route('product')}}">Single Product</a>
+                  <a class="dropdown-item" href="{{route('cart')}}">Cart</a>
+                  <a class="dropdown-item" href="{{route('checkout')}}">Checkout</a>
               </div>
               <div class="col-md-4">
                   <a class="dropdown-item" href="shop.html">
                       <h5>Vegetable</h5>
                   </a>
-                  <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                  <a class="dropdown-item" href="product-single.html">Single Product</a>
-                  <a class="dropdown-item" href="cart.html">Cart</a>
-                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+                  <a class="dropdown-item" href="{{route('wishlist')}}">Wishlist</a>
+                  <a class="dropdown-item" href="{{route('product')}}">Single Product</a>
+                  <a class="dropdown-item" href="{{route('cart')}}">Cart</a>
+                  <a class="dropdown-item" href="{{route('checkout')}}">Checkout</a>
               </div>
             </div>
           </div>

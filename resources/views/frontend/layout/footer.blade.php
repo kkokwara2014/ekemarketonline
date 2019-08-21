@@ -11,8 +11,8 @@
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">EKEMARKETONLINE</h2>
-            <p>Your market at a glance. We bring to you an amazing and convenient way of shopping your favourite items. Feel free to place your order, it is safe, faster, and it works <blockquote>
-              <h6>Our Catch Phrase</h6><small><em>check availability, know the shop, know the owner, place your order</em></small></blockquote>  </p>
+            <p style="line-height:1em">Your market at a glance. We bring to you an amazing and convenient way of shopping your favourite items. Feel free to place your order, it is safe, faster, and it works <blockquote>
+              <h6 style="margin-bottom:1%">Our Catch Phrase</h6><small><em> <p style="line-height:1em">"check availability, know the shop, know the owner, place your order"</p></em></small></blockquote>  </p>
             {{-- <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
               our phrase check availability, know the shop, know the owner, place your order
               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -25,7 +25,7 @@
           <div class="ftco-footer-widget mb-4 ml-md-5">
             <h2 class="ftco-heading-2">Menu</h2>
             <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Shop</a></li>
+            <li><a href="{{route('shop')}}" class="py-2 d-block">Shop</a></li>
             <li><a href="{{route('about')}}" class="py-2 d-block">About</a></li>
             <li><a href="{{route('contact')}}" class="py-2 d-block">Contact Us</a></li>
             </ul>
@@ -37,13 +37,13 @@
             <div class="d-flex">
                 <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
                   <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-                  <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+                  {{-- <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li> --}}
                   <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
                   <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
                 </ul>
                 <ul class="list-unstyled">
                   <li><a href="#" class="py-2 d-block">FAQs</a></li>
-                  <li><a href="#" class="py-2 d-block">Contact</a></li>
+                  <li><a href="{{route('contact')}}" class="py-2 d-block">Contact</a></li>
                 </ul>
               </div>
           </div>
