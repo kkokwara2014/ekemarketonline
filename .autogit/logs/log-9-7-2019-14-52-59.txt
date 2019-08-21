@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 09 2019 14:52:59 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/AdminController.php
+* app/Http/Controllers/CategoriesController.php
+* app/Http/Controllers/ItemsController.php
+* resources/views/admin/layouts/inc/header.blade.php
+
+
+Created files:
+* .autogit/logs/log-9-7-2019-14-18-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
