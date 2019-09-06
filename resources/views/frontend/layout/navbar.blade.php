@@ -15,7 +15,8 @@
           </div>
           <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
             <span class="text">
-              <a href="{{ route('login') }}" class="text">Sign In</a> | <a href="{{ route('register') }}" class="text">Sign Up</a>
+              <a href="{{ route('login') }}" class="text">Sign In</a> | <a href="{{ route('register') }}"
+                class="text">Sign Up</a>
             </span>
           </div>
         </div>
@@ -42,27 +43,17 @@
           <div class="dropdown-menu" aria-labelledby="dropdown04">
 
             <div class="row">
+              @forelse ($categories->chunk(3) as $chunk)
+              @foreach ($chunk as $category)
               <div class="col-md-4">
-                <a class="dropdown-item" href="shop.html">
-                  <h6>Wears</h6>
+                <a class="dropdown-item" href="#">
+                  <h6>{{$category->name}}</h6>
                 </a>
-                <a class="dropdown-item" href="#">Wishlist</a>
-                <a class="dropdown-item" href="#">Single Product</a>
               </div>
-              <div class="col-md-4">
-                <a class="dropdown-item" href="shop.html">
-                  <h6>Electronics</h6>
-                </a>
-                <a class="dropdown-item" href="#">Wishlist</a>
-                <a class="dropdown-item" href="#">Single Product</a>
-              </div>
-              <div class="col-md-4">
-                <a class="dropdown-item" href="shop.html">
-                  <h6>Fashion</h6>
-                </a>
-                <a class="dropdown-item" href="#">Wishlist</a>
-                <a class="dropdown-item" href="#">Single Product</a>
-              </div>
+              @endforeach
+              @empty
+              <p class="alert alert-info">No Category has been added!</p>
+              @endforelse
             </div>
           </div>
         </li>

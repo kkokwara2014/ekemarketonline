@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
    
     public function index(){
+        $categories=Category::orderBy('name','asc')->get();
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('frontend.index')->with($data);
+        return view('frontend.index',compact('categories'))->with($data);
     }
 
     public function about()
