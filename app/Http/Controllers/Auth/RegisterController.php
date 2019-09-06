@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -73,12 +74,13 @@ class RegisterController extends Controller
     }
 
     public function showRegistrationForm(){
+        $categories=Category::orderBy('name','asc')->get();
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('auth.register')->with($data);
+        return view('auth.register',compact('categories'))->with($data);
     }
 
     public function register(Request $request)

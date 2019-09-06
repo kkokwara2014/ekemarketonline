@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -38,12 +39,13 @@ class LoginController extends Controller
     }
 
     public function showLoginForm(){
+        $categories=Category::orderBy('name','asc')->get();
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('auth.login')->with($data);
+        return view('auth.login',compact('categories'))->with($data);
     }
 
     public function logout()

@@ -23,7 +23,7 @@ class UserimageController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

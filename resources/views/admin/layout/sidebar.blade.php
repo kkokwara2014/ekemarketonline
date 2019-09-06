@@ -40,6 +40,7 @@
         </ul>
       </li> --}}
       <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
+    <li><a href="{{route('userimage.create')}}"><i class="fa fa-picture-o"></i> Photo</a></li>
 
       <li class="treeview">
         <a href="#">
