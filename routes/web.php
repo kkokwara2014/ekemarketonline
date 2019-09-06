@@ -50,4 +50,5 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::resource('category','CategoryController');
     Route::resource('shop','ShopController');
     Route::resource('product','ProductController');
+    Route::resource('subscription','SubscriptionController');
 });

@@ -9,7 +9,7 @@
     <!-- Left col -->
     <section class="col-lg-12 connectedSortable">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
-            <span class="fa fa-plus"></span> Add Shop
+           <span class="fa fa-plus"></span> Add Shop
         </button>
         <br><br>
 
@@ -22,32 +22,27 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Business Name</th>
-                                    <th>Shop Number</th>
-                                    <th>Shop Owner</th>
+                                    <th>Name</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($shops as $shop)
+                                @foreach ($categories as $category)
                                 <tr>
-                                    <td>{{$shop->businessname}}</td>
-                                    <td>{{$shop->shopnumber}}</td>
-                                    <td>{{$shop->user->lastname.' '.$shop->user->firstname}}</td>
-                                    <td><a href="{{ route('shop.edit',$shop->id) }}"><span
-                                                class="fa fa-edit fa-2x text-primary"></span></a></td>
+                                    <td>{{$category->name}}</td>
+                                <td><a href="{{ route('category.edit',$category->id) }}"><span class="fa fa-edit fa-2x text-primary"></span></a></td>
                                     <td>
-                                        <form id="delete-form-{{$shop->id}}" style="display: none"
-                                            action="{{ route('shop.destroy',$shop->id) }}" method="post">
+                                        <form id="delete-form-{{$category->id}}" style="display: none"
+                                            action="{{ route('category.destroy',$category->id) }}" method="post">
                                             {{ csrf_field() }}
                                             {{method_field('DELETE')}}
                                         </form>
                                         <a href="" onclick="
                                                             if (confirm('Are you sure you want to delete this?')) {
                                                                 event.preventDefault();
-                                                            document.getElementById('delete-form-{{$shop->id}}').submit();
+                                                            document.getElementById('delete-form-{{$category->id}}').submit();
                                                             } else {
                                                                 event.preventDefault();
                                                             }
@@ -60,9 +55,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Business Name</th>
-                                    <th>Shop Number</th>
-                                    <th>Shop Owner</th>
+                                    <th>Name</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
@@ -80,16 +73,16 @@
         <div class="modal fade" id="modal-default">
             <div class="modal-dialog">
 
-                <form action="{{ route('shop.store') }}" method="post">
+                <form action="{{ route('category.store') }}" method="post">
                     {{ csrf_field() }}
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Add Shop</h4>
+                            <h4 class="modal-title">Add Category</h4>
                         </div>
                         <div class="modal-body">
-                            <input type="text" class="form-control" name="name" placeholder="Shop Name">
+                            <input type="text" class="form-control" name="name" placeholder="Category Name">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -104,7 +97,7 @@
         </div>
         <!-- /.modal -->
 
-
+       
     </section>
     <!-- /.Left col -->
     <!-- right col (We are only adding the ID to make the widgets sortable)-->

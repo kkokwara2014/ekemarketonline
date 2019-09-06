@@ -39,24 +39,25 @@
           <li><a href="#"><i class="fa fa-circle-o"></i> All Categories</a></li>
         </ul>
       </li> --}}
+      <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
 
-      {{-- <li class="treeview">
+      <li class="treeview">
         <a href="#">
-          <i class="fa fa-edit"></i>
-          <span>Product</span>
+          <i class="fa fa-university"></i>
+          <span>Shop</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> All Products</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> My Shop</a></li>
+          <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> All Shops</a></li>
         </ul>
-      </li> --}}
+      </li>
 
-      <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
-      <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li>
+      {{-- <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li> --}}
       <li><a href="{{ route('product.index') }}"><i class="fa fa-product-hunt"></i> Product</a></li>
-      <li><a href="{{ route('product.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
+      <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
       <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
     </ul>
   </section>
