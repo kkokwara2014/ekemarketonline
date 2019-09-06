@@ -26,7 +26,7 @@
 
       </li>
 
-
+      {{--
       <li class="treeview">
         <a href="#">
           <i class="fa fa-edit"></i>
@@ -36,26 +36,28 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Payable</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Receivable</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> All Categories</a></li>
         </ul>
-      </li>
+      </li> --}}
 
-      <li class="treeview">
+      {{-- <li class="treeview">
         <a href="#">
           <i class="fa fa-edit"></i>
-          <span>Finance</span>
+          <span>Product</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Budget</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Fund Retirement</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> All Products</a></li>
         </ul>
-      </li>
+      </li> --}}
 
-
+      <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
+      <li><a href="#"><i class="fa fa-university"></i> Shop</a></li>
+      <li><a href="#"><i class="fa fa-product-hunt"></i> Product</a></li>
+      <li><a href="#"><i class="fa fa-money"></i> Subscription</a></li>
+      <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
     </ul>
   </section>
   <!-- /.sidebar -->
