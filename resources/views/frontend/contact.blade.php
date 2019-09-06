@@ -1,7 +1,7 @@
 @extends('frontend.layout.main')
 
 @section('content')
-<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/bg_1.jpg')}});">
+<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarket1.jpg')}});">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-4 d-flex">
             <div class="info bg-white p-4">
-              <p><span>Phone:</span> <a href="tel://1234567920">{{$phone}}</a></p>
+              <p><span>Phone:</span> <a href="tel:{{$phone}}">{{$phone}}</a></p>
             </div>
         </div>
         <div class="col-md-4 d-flex">
