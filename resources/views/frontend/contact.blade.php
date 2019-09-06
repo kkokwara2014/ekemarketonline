@@ -16,30 +16,30 @@
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
         <div class="w-100"></div>
-        <div class="col-md-3 d-flex">
+        <div class="col-md-4 d-flex">
             <div class="info bg-white p-4">
               <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
             </div>
         </div>
-        <div class="col-md-3 d-flex">
+        <div class="col-md-4 d-flex">
             <div class="info bg-white p-4">
-              <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+              <p><span>Phone:</span> <a href="tel://1234567920">+234 803-888-3919</a></p>
             </div>
         </div>
-        <div class="col-md-3 d-flex">
+        <div class="col-md-4 d-flex">
             <div class="info bg-white p-4">
-              <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+              <p><span>Email:</span> <a href="mailto:services@ekemarketonline.com">services@ekemarketonline.com</a></p>
             </div>
         </div>
-        <div class="col-md-3 d-flex">
+        {{-- <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
               <p><span>Website</span> <a href="#">yoursite.com</a></p>
             </div>
-        </div>
+        </div> --}}
       </div>
       <div class="row block-9">
         <div class="col-md-6 order-md-last d-flex">
-          <form action="#" class="bg-white p-5 contact-form">
+          <form action="#" class="bg-white p-5">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Your Name">
             </div>

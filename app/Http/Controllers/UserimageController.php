@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ItemsController extends Controller
+class UserimageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,8 +23,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        $pageTitle='Add Item';
-        return view('admin.item.create',compact('pageTitle'));
+        //
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,8 +23,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $pageTitle='Add Category';
-        return view('admin.category.create',compact('pageTitle'));
+        //
     }
 
     /**
