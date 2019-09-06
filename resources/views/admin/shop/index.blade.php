@@ -14,7 +14,7 @@
         <br><br>
 
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-9">
 
                 <div class="box">
                     <!-- /.box-header -->
@@ -102,8 +102,10 @@
                                 <label for="">Shop Owner</label>
                                 <select name="user_id" class="form-control">
                                     <option selected="disabled">Select Shop Owner</option>
-                                    @foreach ($shops as $shop)
-                                    <option value="{{$shop->id}}">{{$shop->name}}</option>
+                                    @foreach ($users as $user)
+                                    @if (Auth::user()->id==$user->id)
+                                    <option value="{{$user->id}}">{{$user->lastname.' '.$user->firstname}}</option>
+                                    @endif
                                     @endforeach
                                 </select>
 

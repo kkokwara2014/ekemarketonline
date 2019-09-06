@@ -70,7 +70,7 @@ class ShopController extends Controller
     public function edit($id)
     {
         $shops=Shop::where('id',$id)->first();
-        $users=User::where('id',$id)->first();
+        $users=User::orderBy('lastname','asc')->get();
         return view('admin.shop.edit',compact('shops','users'));
     }
 

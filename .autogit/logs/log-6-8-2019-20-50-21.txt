@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 06 2019 20:50:21 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ShopController.php
+* resources/views/admin/shop/edit.blade.php
+* resources/views/admin/shop/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-6-8-2019-20-20-9.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -37,9 +37,11 @@
                                 <label for="name">Shop Owner</label>
                                 <select name="mda_id" class="form-control">
                                     <option selected="disabled">Select Shop Owner</option>
-                                    @foreach ($shops as $shop)
-                                    <option value="{{$shop->id}}" {{$shop->id==$users->shop_id ? 'selected':''}}>
-                                            {{$shop->user->lastname.' '.$shop->user->firstname}}</option>
+                                    @foreach ($users as $user)
+                                    @if (Auth::user()->id==$user->id)
+                                    <option value="{{$user->id}}" {{$user->id==$shops->user_id ? 'selected':''}}>
+                                        {{$user->lastname.' '.$user->firstname}}</option>
+                                    @endif
                                     @endforeach
                                 </select>
                             </div>
