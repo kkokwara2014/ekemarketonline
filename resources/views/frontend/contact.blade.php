@@ -1,7 +1,7 @@
 @extends('frontend.layout.main')
 
 @section('content')
-<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarket1.jpg')}});">
+<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
@@ -39,6 +39,7 @@
       <div class="col-md-6 order-md-last d-flex contact-form">
         <form action="{{ route('contact.store') }}" class="bg-white p-5" method="POST">
           {{ csrf_field() }}
+
 
           <div class="form-group">
             <input type="text" name="sender" class="form-control" placeholder="Your Name">
