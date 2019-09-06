@@ -40,11 +40,14 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', 'FrontController@index')->name('index');
 Route::get('/about', 'FrontController@about')->name('about');
-// Route::get('/contact', 'FrontController@contact')->name('contact');
+
 
 Route::resource('contact','ContactController');
 
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminController@index')->name('dashboard.index');
+    Route::resource('category','CategoryController');
+    Route::resource('shop','ShopController');
+    Route::resource('product','ProductController');
 });
