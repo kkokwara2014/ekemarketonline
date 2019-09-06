@@ -69,18 +69,18 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="{{asset('bootstrap_assets/dist/img/user2-160x160.jpg')}}" class="user-image"
+                  <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="user-image"
                     alt="User Image">
-                  <span class="hidden-xs">{{Auth::user()->name}}</span>
+                  <span class="hidden-xs">{{Auth::user()->lastname.' '.Auth::user()->firstname}}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="{{asset('bootstrap_assets/dist/img/user2-160x160.jpg')}}" class="img-circle"
+                    <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="img-circle"
                       alt="User Image">
 
                     <p>
-                      {{Auth::user()->name}} - {{Auth::user()->role->name}}
+                      {{Auth::user()->lastname.' '.Auth::user()->firstname}} - {{Auth::user()->role->name}}
                       <small>Member since {{Auth::user()->created_at->diffForHumans()}}</small>
                     </p>
                   </li>

@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 06 2019 11:52:02 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/layout/header.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
