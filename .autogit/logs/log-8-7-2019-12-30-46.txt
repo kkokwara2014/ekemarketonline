@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 08 2019 12:30:46 GMT+0100 (British Summer Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/about.blade.php
+* resources/views/frontend/layout/navbar.blade.php
+
+
+Created files:
+* .autogit/logs/log-8-7-2019-6-10-7.txt
+
+
+Deleted files:
+
+
+Renamed files:
