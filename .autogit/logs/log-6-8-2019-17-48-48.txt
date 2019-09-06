@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 06 2019 17:48:48 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/auth/login.blade.php
+* resources/views/auth/register.blade.php
+* resources/views/frontend/about.blade.php
+* resources/views/frontend/contact.blade.php
+
+
+Created files:
+
+
+Deleted files:
+* resources/views/frontend/login.blade.php
+* resources/views/frontend/signup.blade.php
+
+
+Renamed files:

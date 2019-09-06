@@ -40,12 +40,10 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', 'FrontController@index')->name('index');
 Route::get('/about', 'FrontController@about')->name('about');
-Route::get('/contact', 'FrontController@contact')->name('contact');
-Route::get('/cart', 'FrontController@cart')->name('cart');
-Route::get('/checkout', 'FrontController@checkout')->name('checkout');
-Route::get('/shop', 'FrontController@shop')->name('shop');
-Route::get('/wishlist', 'FrontController@wishlist')->name('wishlist');
-Route::get('/product', 'FrontController@productSingle')->name('product');
+// Route::get('/contact', 'FrontController@contact')->name('contact');
+
+Route::resource('contact','ContactController');
+
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminController@index')->name('dashboard.index');

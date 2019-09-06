@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -12,9 +13,7 @@ class ContactController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+    { }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +22,12 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $data = array(
+            'phone' => '+ 234 813 888 3919',
+            'email' => 'services@ekemarketonline.com',
+            'address' => 'Amangbala Afikpo North Local Government Area'
+        );
+        return view('frontend.contact')->with($data);
     }
 
     /**
@@ -34,7 +38,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'sender'=>'required|string',
+            'email'=>'required|email',
+            'subject'=>'required|string',
+            'messagecontent'=>'required|string',
+        ]);
+
+        Contact::create($request->all());
+
+        return back()->with('success','Your message has been sent! Thank you.');
     }
 
     /**
