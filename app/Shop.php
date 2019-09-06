@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
-    protected $fillable=[];
+    protected $fillable=['businessname','shopnumber','user_id'];
 
     public function user(){
         return $this->belongsTo(User::class);
