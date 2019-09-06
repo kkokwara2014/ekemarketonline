@@ -54,9 +54,9 @@
       </li> --}}
 
       <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
-      <li><a href="#"><i class="fa fa-university"></i> Shop</a></li>
-      <li><a href="#"><i class="fa fa-product-hunt"></i> Product</a></li>
-      <li><a href="#"><i class="fa fa-money"></i> Subscription</a></li>
+      <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li>
+      <li><a href="{{ route('product.index') }}"><i class="fa fa-product-hunt"></i> Product</a></li>
+      <li><a href="{{ route('product.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
       <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
     </ul>
   </section>

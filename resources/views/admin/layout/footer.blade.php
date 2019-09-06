@@ -1,8 +1,8 @@
 <footer class="main-footer">
   <div class="pull-right hidden-xs">
-    <b>Version</b> 2.4.0
+    Powered by Done-Right Systems Inc.
   </div>
-  <strong>Copyright &copy; 2018 ifms.</strong> All rights
+  <strong>Copyright &copy; 2018 ekemarketonline.com</strong> All rights
   reserved.
 </footer>
 
