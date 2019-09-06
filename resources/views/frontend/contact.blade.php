@@ -31,14 +31,10 @@
               <p><span>Email:</span> <a href="mailto:info@yoursite.com">{{$email}}</a></p>
             </div>
         </div>
-        {{-- <div class="col-md-3 d-flex">
-            <div class="info bg-white p-4">
-            <p><span>Website</span> <a href="{{ route('index') }}">ekemarketonline.com</a></p>
-            </div>
-        </div> --}}
+       
       </div>
       <div class="row block-9">
-        <div class="col-md-6 order-md-last d-flex">
+        <div class="col-md-6 order-md-last d-flex contact-form">
           <form action="#" class="bg-white p-5">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Your Name">

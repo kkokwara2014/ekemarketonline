@@ -9,13 +9,15 @@
             <span class="text">{{$phone}}</span>
           </div>
           <div class="col-md pr-4 d-flex topper align-items-center">
-            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span
-                class="icon-paper-plane"></span></div>
+            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-envelope"></span>
+            </div>
             <span class="text">services@ekemarketonline.com</span>
           </div>
-          {{-- <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                        <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-                    </div> --}}
+          <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+            <span class="text">
+              <a href="{{ route('login') }}" class="text">Sign In</a> | <a href="{{ route('register') }}" class="text">Sign Up</a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -31,7 +33,8 @@
 
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="{{ route('index') }}" class="nav-link"><span class="ion-ios-home" style="font-size: 13px;"></span> </a></li>
+        <li class="nav-item active"><a href="{{ route('index') }}" class="nav-link"><span class="ion-ios-home"
+              style="font-size: 13px;"></span> </a></li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
@@ -53,14 +56,21 @@
                 <a class="dropdown-item" href="#">Wishlist</a>
                 <a class="dropdown-item" href="#">Single Product</a>
               </div>
+              <div class="col-md-4">
+                <a class="dropdown-item" href="shop.html">
+                  <h6>Fashion</h6>
+                </a>
+                <a class="dropdown-item" href="#">Wishlist</a>
+                <a class="dropdown-item" href="#">Single Product</a>
+              </div>
             </div>
           </div>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Sign In</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
-        
+        <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign In</a></li>
+        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Sign Up</a></li>
+
       </ul>
     </div>
   </div>

@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -35,6 +35,15 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function showLoginForm(){
+        $data=array(
+            'phone'=>'+ 234 813 888 3919',
+            'email'=>'services@ekemarketonline.com',
+            'address'=>'Amangbala Afikpo North Local Government Area'
+        );
+        return view('auth.login')->with($data);
     }
 
     public function logout()

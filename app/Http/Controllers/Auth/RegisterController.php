@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -48,8 +49,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'firstname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -68,4 +71,38 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function showRegistrationForm(){
+        $data=array(
+            'phone'=>'+ 234 813 888 3919',
+            'email'=>'services@ekemarketonline.com',
+            'address'=>'Amangbala Afikpo North Local Government Area'
+        );
+        return view('auth.register')->with($data);
+    }
+
+    public function register(Request $request)
+    {
+        $this->validate($request,[
+            'lastname'=>'required|string',
+            'firstname'=>'required|string',
+            'email'=>'required|email|unique:users',
+            'phone' => 'required',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+
+        $user=new User;
+        $user->lastname=$request->lastname;
+        $user->firstname=$request->firstname;
+        $user->email=$request->email;
+        $user->phone=$request->phone;
+        $user->password=bcrypt($request->password);
+        $user->role_id=$request->role_id;
+        $user->isactive='0';
+
+        $user->save();
+        
+        return redirect(route('register'))->with('success','Account has been created successfully!');
+    }
+
 }

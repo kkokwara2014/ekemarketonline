@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 06 2019 14:05:00 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontController.php
+* resources/views/frontend/layout/navbar.blade.php
+* routes/web.php
+
+
+Created files:
+* resources/views/frontend/login.blade.php
+* resources/views/frontend/signup.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
