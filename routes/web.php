@@ -31,14 +31,7 @@ Route::get('/shop','FrontController@shop')->name('shop');
 Route::get('/wishlist','FrontController@wishlist')->name('wishlist');
 Route::get('/product','FrontController@productSingle')->name('product');
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
-    Route::get('/','AdminController@index')->name('admin.index');
+Route::group(['prefix'=>'dashboard','middleware'=>'auth'], function(){
+    Route::get('/','AdminController@index')->name('dashboard.index');
 });
 
-Route::group(['prefix'=>'item','middleware'=>'auth'], function(){
-    Route::get('/create','ItemsController@create')->name('admin.create.item');
-});
-
-Route::group(['prefix'=>'category','middleware'=>'auth'], function(){
-    Route::get('/create','CategoriesController@create')->name('admin.create.category');
-});

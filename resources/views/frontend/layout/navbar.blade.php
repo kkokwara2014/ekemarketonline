@@ -58,6 +58,8 @@
         </li>
         <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sign In</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
         
       </ul>
     </div>

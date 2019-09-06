@@ -81,4 +81,22 @@ class FrontController extends Controller
         );
         return view('frontend.product')->with($data);
     }
+    public function loginForm()
+    {
+        $data=array(
+            'phone'=>'+ 234 813 888 3919',
+            'email'=>'services@ekemarketonline.com',
+            'address'=>'Amangbala Afikpo North Local Government Area'
+        );
+        return view('frontend.login')->with($data);
+    }
+    public function signUp()
+    {
+        $data=array(
+            'phone'=>'+ 234 813 888 3919',
+            'email'=>'services@ekemarketonline.com',
+            'address'=>'Amangbala Afikpo North Local Government Area'
+        );
+        return view('frontend.signup')->with($data);
+    }
 }
