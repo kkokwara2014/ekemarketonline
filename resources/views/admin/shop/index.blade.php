@@ -89,7 +89,25 @@
                             <h4 class="modal-title">Add Shop</h4>
                         </div>
                         <div class="modal-body">
-                            <input type="text" class="form-control" name="name" placeholder="Shop Name">
+                            <div>
+                                <label for="">Business Name</label>
+                                <input type="text" class="form-control" name="businessname" placeholder="Business Name">
+                            </div>
+                            <div>
+                                <label for="">Shop Number</label>
+                                <input type="text" class="form-control" name="shopnumber" placeholder="Shop Number">
+                            </div>
+
+                            <div>
+                                <label for="">Shop Owner</label>
+                                <select name="user_id" class="form-control">
+                                    <option selected="disabled">Select Shop Owner</option>
+                                    @foreach ($shops as $shop)
+                                    <option value="{{$shop->id}}">{{$shop->name}}</option>
+                                    @endforeach
+                                </select>
+
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

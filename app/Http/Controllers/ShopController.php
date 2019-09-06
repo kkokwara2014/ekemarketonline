@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Shop;
+use App\User;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -15,7 +16,9 @@ class ShopController extends Controller
     public function index()
     {
         $shops=Shop::orderBy('created_at','desc')->get();
-        return view('admin.shop.index',compact('shops'));
+        
+        $users=User::orderBy('lastname','asc')->get();
+        return view('admin.shop.index',compact('shops','users'));
     }
 
     /**
@@ -66,8 +69,9 @@ class ShopController extends Controller
      */
     public function edit($id)
     {
-        $shops=Shop::where('id',$id)->first();;
-        return view('admin.shop.edit',compact('shops'));
+        $shops=Shop::where('id',$id)->first();
+        $users=User::where('id',$id)->first();
+        return view('admin.shop.edit',compact('shops','users'));
     }
 
     /**
