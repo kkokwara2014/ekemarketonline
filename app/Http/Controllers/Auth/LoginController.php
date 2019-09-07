@@ -6,6 +6,8 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use App\Http\Controllers\Auth\Request;
+
 class LoginController extends Controller
 {
     /*
@@ -38,15 +40,22 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function showLoginForm(){
-        $categories=Category::orderBy('name','asc')->get();
-        $data=array(
-            'phone'=>'+ 234 813 888 3919',
-            'email'=>'services@ekemarketonline.com',
-            'address'=>'Amangbala Afikpo North Local Government Area'
+    public function showLoginForm()
+    {
+        $categories = Category::orderBy('name', 'asc')->get();
+        $data = array(
+            'phone' => '+ 234 813 888 3919',
+            'email' => 'services@ekemarketonline.com',
+            'address' => 'Amangbala Afikpo North Local Government Area'
         );
-        return view('auth.login',compact('categories'))->with($data);
+        return view('auth.login', compact('categories'))->with($data);
     }
+
+    protected function credentials(Request $request)
+    {
+        return ['email' => $request->{$this->username()}, 'password' => $request->password, 'isactive' => '1'];
+    }
+
 
     public function logout()
     {
