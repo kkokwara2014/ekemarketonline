@@ -35,7 +35,7 @@
                                 @foreach ($products as $product)
                                 <tr>
                                     <td>{{$product->name}}</td>
-                                    <td>{{$product->price}}</td>
+                                    <td>&#8358; {{$product->price}}</td>
                                     <td>{{$product->category->name}}</td>
                                     <td><a href="{{ route('product.show',$product->id) }}"><span
                                                 class="fa fa-eye fa-2x text-primary"></span></a></td>
@@ -85,7 +85,7 @@
         <div class="modal fade" id="modal-default">
             <div class="modal-dialog">
 
-                <form action="{{ route('product.store') }}" method="post">
+                <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="modal-content">
                         <div class="modal-header">
@@ -118,7 +118,7 @@
                                     <option selected="disabled">Select Shop</option>
                                     @foreach ($shops as $shop)
                                     @if (Auth::user()->id==$shop->user->id)
-                                    <option value="{{$shop->id}}">{{$shop->shopnumber}}</option>
+                                    <option value="{{$shop->id}}">{{$shop->businessname.' - '.$shop->shopnumber}}</option>
                                     @endif
                                     @endforeach
                                 </select>
@@ -126,7 +126,7 @@
 
                             <div>
                                 <label for="">Description</label>
-                                <textarea name="description" class="form-control" cols="10" rows="10"></textarea>
+                                <textarea name="description" class="form-control" cols="10" rows="3"></textarea>
                             </div>
                             <div>
                                 <label for="">Upload Product Image</label>
