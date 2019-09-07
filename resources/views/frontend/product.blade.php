@@ -16,12 +16,11 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 mb-5 ftco-animate">
+            <div class="col-lg-5 mb-5 ftco-animate">
                 <a href="{{url('product_images',$products->image)}}" class="image-popup"><img
-                        src="{{url('product_images',$products->image)}}" class="img-fluid"
-                        ></a>
+                        src="{{url('product_images',$products->image)}}" class="img-fluid" width="300" height="350"></a>
             </div>
-            <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+            <div class="col-lg-7 product-details pl-md-5 ftco-animate">
                 <h3>{{$products->name}}</h3>
                 {{-- <div class="rating d-flex">
                     <p class="text-left mr-4">
@@ -39,13 +38,24 @@
                         <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                     </p>
                 </div> --}}
-                <p class="price"><span>&#8358; {{$products->price}}</span></p>
+                <p class="price">Unit Price : &#8358; {{$products->price}}</p>
                 <p>
-                    {{$products->description}}
+                    Description : {{$products->description}}
                 </p>
-                
+
+                <div>Category : {{$products->category->name}} </div>
+
+                <div>Found In : {{$products->shop->businessname.' - '.$products->shop->shopnumber}} </div>
+
+
+                <div>
+                    Shop Owner :
+                    <strong>{{strtoupper($products->shop->user->lastname).', '.$products->shop->user->firstname}}</strong>
+                </div>
+                <div>Phone : {{$products->shop->user->phone}}</div>
+
                 <hr>
-                <p><a href="#" class="btn btn-black py-3 px-5">Continue to Shop</a></p>
+            <p><a href="{{ route('index') }}" class="btn btn-black py-3 px-5">Continue to Shop</a></p>
             </div>
         </div>
     </div>
