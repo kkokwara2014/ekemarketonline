@@ -8,8 +8,8 @@
 <div class="row">
     <!-- Left col -->
     <section class="col-lg-12 connectedSortable">
-        <a href="{{ route('shop.index') }}" class="btn btn-success">
-            <span class="fa fa-eye"></span> All Shops
+        <a href="{{ route('product.index') }}" class="btn btn-success">
+            <span class="fa fa-eye"></span> All Products
         </a>
         <br><br>
 
@@ -19,31 +19,48 @@
                 <div class="box">
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form action="{{ route('shop.update',$shops->id) }}" method="post">
+                        <form action="{{ route('product.update',$products->id) }}" method="post">
                             {{ csrf_field() }}
                             {{method_field('PUT')}}
 
                             <div>
-                                <label for="name">Business Name</label>
-                                <input type="text" class="form-control" name="businessname"
-                                    value="{{$shops->businessname}}">
+                                <label for="">Product Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Product Name">
                             </div>
                             <div>
-                                <label for="name">Shop Number</label>
-                                <input type="text" class="form-control" name="shopnumber"
-                                    value="{{$shops->shopnumber}}">
+                                <label for="">Product Price</label>
+                                <input type="text" class="form-control" name="price" placeholder="Product Price"
+                                    maxlength="7">
                             </div>
                             <div>
-                                <label for="name">Shop Owner</label>
-                                <select name="mda_id" class="form-control">
-                                    <option selected="disabled">Select Shop Owner</option>
-                                    @foreach ($users as $user)
-                                    @if (Auth::user()->id==$user->id)
-                                    <option value="{{$user->id}}" {{$user->id==$shops->user_id ? 'selected':''}}>
-                                        {{$user->lastname.' '.$user->firstname}}</option>
+                                <label for="">Category</label>
+                                <select name="category_id" class="form-control">
+                                    <option selected="disabled">Select Category</option>
+                                    @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Shop</label>
+                                <select name="shop_id" class="form-control">
+                                    <option selected="disabled">Select Shop</option>
+                                    @foreach ($shops as $shop)
+                                    @if (Auth::user()->id==$shop->user->id)
+                                    <option value="{{$shop->id}}">{{$shop->businessname.' - '.$shop->shopnumber}}
+                                    </option>
                                     @endif
                                     @endforeach
                                 </select>
+                            </div>
+
+                            <div>
+                                <label for="">Description</label>
+                                <textarea name="description" class="form-control" cols="10" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <label for="">Upload Product Image</label>
+                                <input type="file" name="image">
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Update</button>
