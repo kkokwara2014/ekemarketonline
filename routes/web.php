@@ -40,6 +40,7 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', 'FrontController@index')->name('index');
 Route::get('/about', 'FrontController@about')->name('about');
+Route::get('/product/{id}/show', 'FrontController@productSingle')->name('product.show');
 
 
 Route::resource('contact','ContactController');
