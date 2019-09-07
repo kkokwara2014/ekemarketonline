@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 07 2019 03:27:30 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/UserimageController.php
+* resources/views/admin/userimage/create.blade.php
+
+
+Created files:
+* .autogit/logs/log-6-8-2019-22-23-17.txt
+* public/user_images/no_user.jpg
+
+
+Deleted files:
+
+
+Renamed files:
