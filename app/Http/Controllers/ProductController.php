@@ -83,9 +83,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $shops=Shop::where('id',$id)->first();
-        $users=User::orderBy('lastname','asc')->get();
-        return view('admin.shop.edit',compact('shops','users'));
+        $shops=Shop::orderBy('shopnumber','asc')->get();
+        $categories=Category::orderBy('name','asc')->get();
+        $products=Product::where('id',$id)->first();
+        return view('admin.product.edit',compact('shops','categories','products'));
     }
 
     /**

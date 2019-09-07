@@ -25,11 +25,11 @@
 
                             <div>
                                 <label for="">Product Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="Product Name">
+                            <input type="text" class="form-control" name="name" value="{{$products->name}}">
                             </div>
                             <div>
                                 <label for="">Product Price</label>
-                                <input type="text" class="form-control" name="price" placeholder="Product Price"
+                                <input type="text" class="form-control" name="price" value="{{$products->price}}"
                                     maxlength="7">
                             </div>
                             <div>
@@ -56,7 +56,9 @@
 
                             <div>
                                 <label for="">Description</label>
-                                <textarea name="description" class="form-control" cols="10" rows="3"></textarea>
+                                <textarea name="description" class="form-control text-left" cols="10" rows="3">
+                                        {!! ltrim($products->description) !!}
+                                </textarea>
                             </div>
                             <div>
                                 <label for="">Upload Product Image</label>
@@ -64,7 +66,7 @@
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary">Update</button>
-                            <a href="{{ route('shop.index') }}" class="btn btn-default">Cancel</a>
+                            <a href="{{ route('product.index') }}" class="btn btn-default">Cancel</a>
 
                     </div>
                     </form>
