@@ -31,9 +31,8 @@
                                 <hr>
                                 <div>Unit Price : &#8358;{{$product->price}} </div>
                                 <div>Category : {{$product->category->name}} </div>
-                                <div>Found In : {{$product->shop->businessname.' - '.$product->shop->shopnumber}} </div>
-                                <div>Category : {{$product->category->name}} </div>
                                 <div>Description : {{$product->description}} </div>
+                                <div>Found In : {{$product->shop->businessname.' - '.$product->shop->shopnumber}} </div>
 
                                 <br>
                                 <div>

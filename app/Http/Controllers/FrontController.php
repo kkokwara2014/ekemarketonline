@@ -84,9 +84,9 @@ class FrontController extends Controller
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-
+        $categories=Category::orderBy('name','asc')->get();
         $products=Product::find($id);
-        return view('frontend.product',compact('products'))->with($data);
+        return view('frontend.product',compact('products','categories'))->with($data);
     }
     
 }

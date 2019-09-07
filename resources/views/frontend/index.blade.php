@@ -111,14 +111,14 @@
 						<h3><a href="#">{{$product->name}}</a></h3>
 						<div class="d-flex">
 							<div class="pricing">
-								<p class="price"><span class="mr-2 price-dc">$100.00</span><span
-										class="price-sale">{{$product->price}}</span></p>
+								<p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span
+										class="price-sale">&#8358; {{$product->price}}</span></p>
 							</div>
 						</div>
 						<div class="bottom-area d-flex px-3">
 							<div class="m-auto d-flex">
 
-								<a href="{{ route('product.show',$product->id) }}"
+								<a href="{{ route('frontend.product.show',$product->id) }}"
 									class="heart d-flex justify-content-center align-items-center" title="View Details">
 									<span><i class="ion-ios-eye"></i></span>
 								</a>
