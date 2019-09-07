@@ -52,9 +52,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>EMkt</b>Online</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Ekemarketonline</b> Dashboard</span>
+          <span class="logo-lg"><b>Ekemarketonline</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -69,14 +69,14 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="user-image"
+                  <img src="{{asset('admin_assets/dist/img/no_user.jpg')}}" class="user-image"
                     alt="User Image">
                   <span class="hidden-xs">{{Auth::user()->lastname.' '.Auth::user()->firstname}}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="{{asset('admin_assets/dist/img/user2-160x160.jpg')}}" class="img-circle"
+                    <img src="{{asset('admin_assets/dist/img/no_user.jpg')}}" class="img-circle"
                       alt="User Image">
 
                     <p>

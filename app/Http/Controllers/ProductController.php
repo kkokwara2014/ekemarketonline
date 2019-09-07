@@ -85,6 +85,7 @@ class ProductController extends Controller
     {
         $shops=Shop::orderBy('shopnumber','asc')->get();
         $categories=Category::orderBy('name','asc')->get();
+       
         $products=Product::where('id',$id)->first();
         return view('admin.product.edit',compact('shops','categories','products'));
     }

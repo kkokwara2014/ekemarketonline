@@ -25,7 +25,7 @@
 
                             <div>
                                 <label for="">Product Name</label>
-                            <input type="text" class="form-control" name="name" value="{{$products->name}}">
+                                <input type="text" class="form-control" name="name" value="{{$products->name}}">
                             </div>
                             <div>
                                 <label for="">Product Price</label>
@@ -37,7 +37,8 @@
                                 <select name="category_id" class="form-control">
                                     <option selected="disabled">Select Category</option>
                                     @foreach ($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}">
+                                        {{$category->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -56,8 +57,9 @@
 
                             <div>
                                 <label for="">Description</label>
-                                <textarea name="description" class="form-control text-left" cols="10" rows="3">
-                                        {!! ltrim($products->description) !!}
+                                <textarea name="description" class="form-control" cols="10" rows="3"
+                                    style="text-align: left">
+                                {{ $products->description }}
                                 </textarea>
                             </div>
                             <div>
