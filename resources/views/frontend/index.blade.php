@@ -116,7 +116,7 @@
 						<div class="bottom-area d-flex px-3">
 							<div class="m-auto d-flex">
 
-								<a href="#" class="heart d-flex justify-content-center align-items-center" title="View Details">
+								<a href="{{ route('product.show',$product->id) }}" class="heart d-flex justify-content-center align-items-center" title="View Details">
 									<span><i class="ion-ios-eye"></i></span>
 								</a>
 							</div>

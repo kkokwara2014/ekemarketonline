@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -75,14 +76,16 @@ class FrontController extends Controller
         return view('frontend.wishlist')->with($data);
     }
 
-    public function productSingle()
+    public function productSingle($id)
     {
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('frontend.product')->with($data);
+
+        $product=Product::find($id);
+        return view('frontend.product',compact('product'))->with($data);
     }
     
 }
