@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sun Sep 08 2019 08:56:24 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/UserController.php
+* database/migrations/2014_10_12_000000_create_users_table.php
+* resources/views/admin/user/profile.blade.php
+
+
+Created files:
+* .autogit/logs/log-8-8-2019-6-33-48.txt
+
+
+Deleted files:
+* app/Userimage.php
+* database/migrations/2019_09_06_073232_create_userimages_table.php
+
+
+Renamed files:
+* [object Object]
