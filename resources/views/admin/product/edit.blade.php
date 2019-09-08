@@ -19,7 +19,7 @@
                 <div class="box">
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form action="{{ route('product.update',$products->id) }}" method="post">
+                        <form action="{{ route('product.update',$products->id) }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{method_field('PUT')}}
 

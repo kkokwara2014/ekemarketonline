@@ -119,7 +119,15 @@ class ProductController extends Controller
             $formInput['image']=$imageName;
         }
 
-        Product::save($formInput);
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->description = $request->description;
+        $product->shop_id = $request->shop_id;
+        $product->category_id = $request->category_id;
+        $product->image = $formInput['image'];
+
+        $product->save();
 
         return redirect()->route('product.index');
     }

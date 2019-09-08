@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sun Sep 08 2019 11:49:28 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontController.php
+* app/Http/Controllers/ProductController.php
+* resources/views/frontend/layout/navbar.blade.php
+* resources/views/frontend/productsbycategory.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-8-8-2019-11-16-8.txt
+* public/product_images/1567939341.jpg
+
+
+Deleted files:
+
+
+Renamed files:
