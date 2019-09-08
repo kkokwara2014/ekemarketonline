@@ -23,7 +23,7 @@
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                                     <br>
-                                    <input type="file" name="imagename">
+                                    <input type="file" name="userimage">
                                     <p></p>
                                     <button type="submit" class="btn btn-success text-center"><span class="fa fa-upload"></span>
                                         Upload your

@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('password');
+            $table->string('userimage')->default('defaultuserimage.jpg');
             $table->integer('role_id');
             $table->tinyInteger('isactive')->default('0');
             $table->rememberToken();
