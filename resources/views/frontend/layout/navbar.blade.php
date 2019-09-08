@@ -66,4 +66,4 @@
     </div>
   </div>
 </nav>
-<!-- END nav -->
+<!-- End of navbar -->

@@ -81,7 +81,7 @@
 
                     <p>
                       {{Auth::user()->lastname.' '.Auth::user()->firstname}} - {{Auth::user()->role->name}}
-                      <small>Member since {{Auth::user()->created_at->diffForHumans()}}</small>
+                      <small>Created {{Auth::user()->created_at->diffForHumans()}}</small>
                     </p>
                   </li>
 

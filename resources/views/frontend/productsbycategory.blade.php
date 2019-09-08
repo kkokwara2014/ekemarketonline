@@ -92,13 +92,13 @@
 
 			@endforeach
 			@empty
-			<p class="alert alert-info">No Product has been added in this Category!</p>
+			<p class="alert alert-info">No Product has been added to this Category!</p>
 			@endforelse
 
 
 		</div>
 
-		{{-- <p style="text-align: right; color: green;">{{$products->links()}}</p> --}}
+		
 	</div>
 </section>
 
