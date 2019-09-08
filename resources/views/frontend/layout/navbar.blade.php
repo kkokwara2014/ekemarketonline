@@ -46,7 +46,7 @@
               @forelse ($categories->chunk(3) as $chunk)
               @foreach ($chunk as $category)
               <div class="col-md-4">
-                <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{ route('category.showall') }}">
                   <h6>{{$category->name}}</h6>
                 </a>
               </div>

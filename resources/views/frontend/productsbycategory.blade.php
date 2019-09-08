@@ -80,7 +80,7 @@
 
 			@endforeach
 			@empty
-			<p class="alert alert-info">No Product has been added!</p>
+			<p class="alert alert-info">No Product has been added in this Category!</p>
 			@endforelse
 
 
