@@ -53,12 +53,12 @@
 			@foreach ($chunk as $product)
 			<div class="col-md-6 col-lg-3 ftco-animate">
 				<div class="product">
-					<a href="#" class="img-prod"><img class="img-fluid" src="{{url('product_images',$product->image)}}">
+					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid" src="{{url('product_images',$product->image)}}">
 						{{-- <span class="status">30%</span> --}}
 						<div class="overlay"></div>
 					</a>
 					<div class="text py-3 pb-4 px-3 text-center">
-						<h3><a href="#">{{$product->name}}</a></h3>
+						<h3><a href="{{ route('frontend.product.show',$product->id) }}">{{$product->name}}</a></h3>
 						<div class="d-flex">
 							<div class="pricing">
 								<p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span

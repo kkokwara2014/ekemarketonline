@@ -20,62 +20,64 @@
 
                     @if (!empty($shops))
 
-                   
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Business Name</th>
-                                    <th>Shop Number</th>
-                                    <th>Shop Owner</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
+                  
+                       
+                   <!-- /.box-header -->
+                   <div class="box-body">
+                       <table id="example1" class="table table-bordered table-striped">
+                           <thead>
+                               <tr>
+                                   <th>Business Name</th>
+                                   <th>Shop Number</th>
+                                   <th>Shop Owner</th>
+                                   <th>Edit</th>
+                                   <th>Delete</th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($shops as $shop)
+                               </tr>
+                           </thead>
+                           <tbody>
+                               @foreach ($shops as $shop)
 
-                                <tr>
-                                    <td>{{$shop->businessname}}</td>
-                                    <td>{{$shop->shopnumber}}</td>
-                                    <td>{{$shop->user->lastname.' '.$shop->user->firstname}}</td>
-                                    <td><a href="{{ route('shop.edit',$shop->id) }}"><span
-                                                class="fa fa-edit fa-2x text-primary"></span></a></td>
-                                    <td>
-                                        <form id="delete-form-{{$shop->id}}" style="display: none"
-                                            action="{{ route('shop.destroy',$shop->id) }}" method="post">
-                                            {{ csrf_field() }}
-                                            {{method_field('DELETE')}}
-                                        </form>
-                                        <a href="" onclick="
-                                                            if (confirm('Are you sure you want to delete this?')) {
-                                                                event.preventDefault();
-                                                            document.getElementById('delete-form-{{$shop->id}}').submit();
-                                                            } else {
-                                                                event.preventDefault();
-                                                            }
-                                                        "><span class="fa fa-trash fa-2x text-danger"></span>
-                                        </a>
+                               <tr>
+                                   <td>{{$shop->businessname}}</td>
+                                   <td>{{$shop->shopnumber}}</td>
+                                   <td>{{$shop->user->lastname.' '.$shop->user->firstname}}</td>
+                                   <td><a href="{{ route('shop.edit',$shop->id) }}"><span
+                                               class="fa fa-edit fa-2x text-primary"></span></a></td>
+                                   <td>
+                                       <form id="delete-form-{{$shop->id}}" style="display: none"
+                                           action="{{ route('shop.destroy',$shop->id) }}" method="post">
+                                           {{ csrf_field() }}
+                                           {{method_field('DELETE')}}
+                                       </form>
+                                       <a href="" onclick="
+                                                           if (confirm('Are you sure you want to delete this?')) {
+                                                               event.preventDefault();
+                                                           document.getElementById('delete-form-{{$shop->id}}').submit();
+                                                           } else {
+                                                               event.preventDefault();
+                                                           }
+                                                       "><span class="fa fa-trash fa-2x text-danger"></span>
+                                       </a>
 
-                                    </td>
-                                </tr>
+                                   </td>
+                               </tr>
 
-                                @endforeach
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Business Name</th>
-                                    <th>Shop Number</th>
-                                    <th>Shop Owner</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.box-body -->
+                               @endforeach
+                           </tbody>
+                           <tfoot>
+                               <tr>
+                                   <th>Business Name</th>
+                                   <th>Shop Number</th>
+                                   <th>Shop Owner</th>
+                                   <th>Edit</th>
+                                   <th>Delete</th>
+                               </tr>
+                           </tfoot>
+                       </table>
+                   </div>
+                   <!-- /.box-body -->
+                 
                   
                     @else
                     <p class="alert alert-warning">You have not added Shop!</p>
