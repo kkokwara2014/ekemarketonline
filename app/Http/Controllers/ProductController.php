@@ -8,6 +8,7 @@ use App\Category;
 use App\Product;
 use App\Shop;
 use Auth;
+use Image;
 
 class ProductController extends Controller
 {
@@ -52,10 +53,11 @@ class ProductController extends Controller
             'image'=>'required|image|mimes:png,jpg,jpeg|max:10000',
         ]);
 
-        $image=$request->image;
-        if ($image) {
-            $imageName=$image->getClientOriginalName();
-            $image->move('product_images',$imageName);
+        if ($request->hasFile('image')) {
+            $image=$request->file('image');
+            $imageName=time().'.'.$image->getClientOriginalExtension();
+            Image::make($image)->resize(300,300)->save(public_path('product_images/'.$imageName));
+
             $formInput['image']=$imageName;
         }
 
@@ -110,6 +112,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $products=Product::where('id',$id)->delete();
+        return redirect()->back();
     }
 }
