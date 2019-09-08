@@ -26,21 +26,11 @@
 
       </li>
 
-      {{--
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-edit"></i>
-          <span>Product Category</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> All Categories</a></li>
-        </ul>
-      </li> --}}
+      @if (Auth::user()->role->id==1)
       <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
-    <li><a href="{{route('user.profile')}}"><i class="fa fa-picture-o"></i> My Profile Photo</a></li>
+      @endif
+
+      <li><a href="{{route('user.profile')}}"><i class="fa fa-picture-o"></i> My Profile Photo</a></li>
 
       <li class="treeview">
         <a href="#">
@@ -51,15 +41,20 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> My Shop</a></li>
+          <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> My Shop</a></li>
+
+          @if (Auth::user()->role->id==1)
           <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> All Shops</a></li>
+          @endif
         </ul>
       </li>
 
-      {{-- <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li> --}}
-      <li><a href="{{ route('product.index') }}"><i class="fa fa-product-hunt"></i> Product</a></li>
+      <li><a href="{{ route('product.index') }}"><i class="fa fa-lemon-o"></i> Product</a></li>
+
+      @if (Auth::user()->role->id==1)
       <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
       <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
+      @endif
     </ul>
   </section>
   <!-- /.sidebar -->
