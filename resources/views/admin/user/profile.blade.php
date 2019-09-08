@@ -18,14 +18,16 @@
                         <div class="row">
                             <div class="col-md-3"></div>
                             <div class="col-md-6">
-                                <img src="{{url('user_images','no_user.jpg')}}" alt="" class="img-responsive img-circle"
-                                    width="250" height="250">
-                                <form action="" method="post" enctype="multipart/form-data">
-                                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                                <img src="{{url('user_images',$user->userimage)}}" alt=""
+                                    class="img-responsive img-circle" width="300" height="300">
+                                <form action="{{ route('user.profile.update') }}" method="post"
+                                    enctype="multipart/form-data">
+                                    {{ csrf_field() }}
                                     <br>
                                     <input type="file" name="userimage">
                                     <p></p>
-                                    <button type="submit" class="btn btn-success text-center"><span class="fa fa-upload"></span>
+                                    <button type="submit" class="btn btn-success text-center"><span
+                                            class="fa fa-upload"></span>
                                         Upload your
                                         Photo</button>
                                 </form>

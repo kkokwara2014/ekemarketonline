@@ -5,7 +5,7 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="{{asset('admin_assets/dist/img/no_user.jpg')}}" class="img-circle" alt="User Image">
+        <img src="{{url('user_images',$user->userimage)}}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>{{Auth::user()->lastname.' '.Auth::user()->firstname}}</p>
@@ -40,7 +40,7 @@
         </ul>
       </li> --}}
       <li><a href="{{ route('category.index') }}"><i class="fa fa-th"></i> Category</a></li>
-    <li><a href="{{route('userimage.create')}}"><i class="fa fa-picture-o"></i> Photo</a></li>
+    <li><a href="{{route('user.profile')}}"><i class="fa fa-picture-o"></i> My Profile Photo</a></li>
 
       <li class="treeview">
         <a href="#">

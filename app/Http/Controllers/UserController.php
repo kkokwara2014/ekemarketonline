@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+// use Intervention\Image\Image;
+// use App\Http\Controllers\Image;
+use Image;
+
 class UserController extends Controller
 {
     public function profileimage(){
@@ -18,8 +22,8 @@ class UserController extends Controller
 
         if ($request->hasFile('userimage')) {
             $userimage=$request->file('userimage');
-            $filename=time().'_'.$userimage->getClientOriginalName().'.'.$userimage->getClientOriginalExtension();
-            Image::make($userimage)->resize(300,300)->save(public_path('/user_images'.$filename));
+            $filename=time().'_'.$userimage->getClientOriginalExtension();
+            Image::make($userimage)->resize(300,300)->save(public_path('user_images/'.$filename));
 
             $user=Auth::user();
             $user->userimage=$filename;
