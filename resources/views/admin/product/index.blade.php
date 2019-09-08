@@ -33,7 +33,10 @@
                             </thead>
                             <tbody>
                                 @foreach ($products as $product)
+                                @if (auth::user()->id==$product->shop->user_id)
+
                                 <tr>
+
                                     <td>{{$product->name}}</td>
                                     <td>&#8358; {{$product->price}}</td>
                                     <td>{{$product->category->name}}</td>
@@ -59,7 +62,10 @@
                                         </a>
 
                                     </td>
+
                                 </tr>
+
+                                @endif
                                 @endforeach
                             </tbody>
                             <tfoot>
@@ -118,7 +124,8 @@
                                     <option selected="disabled">Select Shop</option>
                                     @foreach ($shops as $shop)
                                     @if (Auth::user()->id==$shop->user->id)
-                                    <option value="{{$shop->id}}">{{$shop->businessname.' - '.$shop->shopnumber}}</option>
+                                    <option value="{{$shop->id}}">{{$shop->businessname.' - '.$shop->shopnumber}}
+                                    </option>
                                     @endif
                                     @endforeach
                                 </select>

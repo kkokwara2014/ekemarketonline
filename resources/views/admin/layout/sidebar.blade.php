@@ -41,18 +41,19 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> My Shop</a></li>
+          {{-- <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> My Shop</a></li> --}}
 
-          @if (Auth::user()->role->id==1)
+          
           <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> All Shops</a></li>
-          @endif
+         
         </ul>
       </li>
 
       <li><a href="{{ route('product.index') }}"><i class="fa fa-lemon-o"></i> Product</a></li>
 
-      @if (Auth::user()->role->id==1)
       <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
+      
+      @if (Auth::user()->role->id==1)
       <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
       @endif
     </ul>

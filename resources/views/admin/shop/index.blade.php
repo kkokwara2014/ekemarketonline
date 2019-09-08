@@ -19,6 +19,10 @@
                 <div class="box">
                     <!-- /.box-header -->
                     <div class="box-body">
+                        @if (!empty($shops))
+
+
+
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
@@ -32,7 +36,10 @@
                             </thead>
                             <tbody>
                                 @foreach ($shops as $shop)
+                                @if (auth::user()->id==$shop->user_id)
+                                
                                 <tr>
+
                                     <td>{{$shop->businessname}}</td>
                                     <td>{{$shop->shopnumber}}</td>
                                     <td>{{$shop->user->lastname.' '.$shop->user->firstname}}</td>
@@ -55,7 +62,10 @@
                                         </a>
 
                                     </td>
+
                                 </tr>
+                                
+                                @endif
                                 @endforeach
                             </tbody>
                             <tfoot>
@@ -68,6 +78,12 @@
                                 </tr>
                             </tfoot>
                         </table>
+
+
+                        @else
+                        <p class="alert alert-warning">You have not added Shop!</p>
+                        @endif
+
                     </div>
                     <!-- /.box-body -->
                 </div>
