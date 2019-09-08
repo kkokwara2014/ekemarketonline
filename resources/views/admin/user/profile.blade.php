@@ -19,7 +19,7 @@
                             <div class="col-md-3"></div>
                             <div class="col-md-6">
                                 <img src="{{url('user_images',$user->userimage)}}" alt=""
-                                    class="img-responsive img-circle" width="300" height="300">
+                                    class="img-responsive img-circle" style="width: 250px; height: 200px; border-radius: 50%;">
                                 <form action="{{ route('user.profile.update') }}" method="post"
                                     enctype="multipart/form-data">
                                     {{ csrf_field() }}

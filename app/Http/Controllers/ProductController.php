@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
 use App\Shop;
+use Auth;
 
 class ProductController extends Controller
 {
@@ -20,7 +21,7 @@ class ProductController extends Controller
         $categories=Category::orderBy('name','asc')->get();
         $shops=Shop::orderBy('shopnumber','asc')->get();
         $products=Product::orderBy('created_at','desc')->get();
-        return view('admin.product.index',compact('categories','shops','products'));
+        return view('admin.product.index',array('user'=>Auth::user()),compact('categories','shops','products'));
     }
 
     /**
@@ -72,7 +73,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $product=Product::find($id);
-        return view('admin.product.show',compact('product'));
+        return view('admin.product.show',array('user'=>Auth::user()),compact('product'));
     }
 
     /**
@@ -86,7 +87,7 @@ class ProductController extends Controller
         $shops=Shop::orderBy('shopnumber','asc')->get();
         $categories=Category::orderBy('name','asc')->get();
         $products=Product::where('id',$id)->first();
-        return view('admin.product.edit',compact('shops','categories','products'));
+        return view('admin.product.edit',array('user'=>Auth::user()),compact('shops','categories','products'));
     }
 
     /**

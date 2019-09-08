@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Sun Sep 08 2019 09:38:11 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/AdminController.php
+* app/Http/Controllers/UserController.php
+* resources/views/admin/layout/header.blade.php
+* resources/views/admin/layout/sidebar.blade.php
+* resources/views/admin/user/profile.blade.php
+
+
+Created files:
+* public/user_images/1567931878_jpg
+
+
+Deleted files:
+* public/product_images/cap.jpg
+* public/product_images/groundnut_oil.jpg
+* public/product_images/pepper.jpg
+* public/product_images/shirt.jpg
+* public/product_images/toilet_tissue.jpg
+
+
+Renamed files:

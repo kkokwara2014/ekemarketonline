@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Shop;
 use App\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class ShopController extends Controller
 {
@@ -18,7 +19,7 @@ class ShopController extends Controller
         $shops=Shop::orderBy('created_at','desc')->get();
         
         $users=User::orderBy('lastname','asc')->get();
-        return view('admin.shop.index',compact('shops','users'));
+        return view('admin.shop.index',array('user'=>Auth::user()),compact('shops','users'));
     }
 
     /**
@@ -71,7 +72,7 @@ class ShopController extends Controller
     {
         $shops=Shop::where('id',$id)->first();
         $users=User::orderBy('lastname','asc')->get();
-        return view('admin.shop.edit',compact('shops','users'));
+        return view('admin.shop.edit',array('user'=>Auth::user()),compact('shops','users'));
     }
 
     /**
