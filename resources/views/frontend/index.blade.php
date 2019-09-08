@@ -9,8 +9,8 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-md-12 ftco-animate text-center">
-						<h1 class="mb-2">100% Meeting your shopping needs</h1>
-						<h2 class="subheading mb-4">We deliver your desired products to you.</h2>
+						<h1 class="mb-2">Bringing Eke Market closer to you!</h1>
+						<h2 class="subheading mb-4">... delivering your desired products to you.</h2>
 						<p><a href="#" class="btn btn-primary">Shop Now</a></p>
 					</div>
 
@@ -24,8 +24,8 @@
 				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 					<div class="col-sm-12 ftco-animate text-center">
-						<h1 class="mb-2">100% Meeting your shopping needs</h1>
-						<h2 class="subheading mb-4">We deliver your desired products to you.</h2>
+						<h1 class="mb-2">Bringing Eke Market closer to you!</h1>
+						<h2 class="subheading mb-4">... delivering your desired products to you.</h2>
 						<p><a href="#" class="btn btn-primary">Shop Now</a></p>
 					</div>
 
@@ -63,8 +63,12 @@
 							<div class="pricing">
 								<p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span
 										class="price-sale">&#8358; {{$product->price}}</span></p>
-							</div>
+							</div>						
 						</div>
+						{{-- <div>
+							<hr>
+							Call {{$product->shop->user->phone}}
+						</div> --}}
 						<div class="bottom-area d-flex px-3">
 							<div class="m-auto d-flex">
 
