@@ -32,7 +32,7 @@
 
       <li><a href="{{route('user.profile')}}"><i class="fa fa-picture-o"></i> My Profile Photo</a></li>
 
-      <li class="treeview">
+      {{-- <li class="treeview">
         <a href="#">
           <i class="fa fa-university"></i>
           <span>Shop</span>
@@ -41,14 +41,12 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          {{-- <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> My Shop</a></li> --}}
-
+                   
           
-          <li><a href="{{ route('shop.index') }}"><i class="fa fa-circle-o"></i> All Shops</a></li>
-         
         </ul>
-      </li>
-
+      </li> --}}
+      
+      <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li>
       <li><a href="{{ route('product.index') }}"><i class="fa fa-lemon-o"></i> Product</a></li>
 
       <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>

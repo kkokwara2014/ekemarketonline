@@ -38,16 +38,15 @@
                         <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                     </p>
                 </div> --}}
-                <p class="price">Unit Price : &#8358; {{$products->price}}</p>
-                <p>
-                    Description : {{$products->description}}
-                </p>
-
+                <div class="price">Unit Price : &#8358; {{$products->price}}</div>
                 <div>Category : {{$products->category->name}} </div>
+                <div>
+                    Description : {{$products->description}}
+                </div>
+
+                <hr>
 
                 <div>Found In : {{$products->shop->businessname.' - '.$products->shop->shopnumber}} </div>
-
-
                 <div>
                     Shop Owner :
                     <strong>{{strtoupper($products->shop->user->lastname).', '.$products->shop->user->firstname}}</strong>

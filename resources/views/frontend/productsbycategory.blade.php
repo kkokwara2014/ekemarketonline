@@ -1,7 +1,7 @@
 @extends('frontend.layout.main')
 
 @section('content')
-<section id="home-section" class="hero">
+{{-- <section id="home-section" class="hero">
 	<div class="home-slider owl-carousel">
 		<div class="slider-item" style="background-image: url({{asset('bootstrap_assets/images/ekemarket1.jpg')}});">
 			<div class="overlay"></div>
@@ -33,7 +33,19 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
+
+<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
+	<div class="container">
+	  <div class="row no-gutters slider-text align-items-center justify-content-center">
+		<div class="col-md-9 ftco-animate text-center">
+		  <p class="breadcrumbs"><span class="mr-2"><a href="{{route('index')}}">Home</a></span> <span>Products by Category</span>
+		  </p>
+		  <h1 class="mb-0 bread">Products by Category</h1>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 
 
@@ -53,12 +65,12 @@
 			@foreach ($chunk as $product)
 			<div class="col-md-6 col-lg-3 ftco-animate">
 				<div class="product">
-					<a href="#" class="img-prod"><img class="img-fluid" src="{{url('product_images',$product->image)}}">
+					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid" src="{{url('product_images',$product->image)}}">
 						{{-- <span class="status">30%</span> --}}
 						<div class="overlay"></div>
 					</a>
 					<div class="text py-3 pb-4 px-3 text-center">
-						<h3><a href="#">{{$product->name}}</a></h3>
+						<h3><a href="{{ route('frontend.product.show',$product->id) }}">{{$product->name}}</a></h3>
 						<div class="d-flex">
 							<div class="pricing">
 								<p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span

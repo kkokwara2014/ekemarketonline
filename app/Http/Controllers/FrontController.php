@@ -22,22 +22,24 @@ class FrontController extends Controller
 
     public function about()
     {
+        $categories=Category::orderBy('name','asc')->get();
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('frontend.about')->with($data);
+        return view('frontend.about',compact('categories'))->with($data);
     }
     
     public function contact()
     {
+        $categories=Category::orderBy('name','asc')->get();
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
-        return view('frontend.contact')->with($data);
+        return view('frontend.contact',compact('categories'))->with($data);
     }
 
     
@@ -79,9 +81,8 @@ class FrontController extends Controller
             'address'=>'Amangbala Afikpo North Local Government Area'
         );
         $categories=Category::orderBy('name','asc')->get();
-        // $products=Product::orderBy('created_at','desc')->paginate(4);
         $products=Category::find($id)->products;
-        // $products=Product::find($id);
+        
         return view('frontend.productsbycategory',compact('products','categories'))->with($data);
     }
     

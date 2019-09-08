@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Contact;
 use Illuminate\Http\Request;
 
@@ -24,12 +25,13 @@ class ContactController extends Controller
      */
     public function create()
     {
+        $categories=Category::orderBy('name','asc')->get();
         $data = array(
             'phone' => '+ 234 813 888 3919',
             'email' => 'services@ekemarketonline.com',
             'address' => 'Amangbala Afikpo North Local Government Area'
         );
-        return view('frontend.contact')->with($data);
+        return view('frontend.contact',compact('categories'))->with($data);
     }
 
     /**

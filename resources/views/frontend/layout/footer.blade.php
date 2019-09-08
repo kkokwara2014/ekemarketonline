@@ -23,9 +23,9 @@
         <div class="ftco-footer-widget mb-3 ml-md-5">
           <h2 class="ftco-heading-2">Menu</h2>
           <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Shop</a></li>
-            <li><a href="#" class="py-2 d-block">About</a></li>
-            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+            <li><a href="{{ route('index') }}" class="py-2 d-block">Home</a></li>
+            <li><a href="{{ route('about') }}" class="py-2 d-block">About</a></li>
+            <li><a href="{{ route('contact.create') }}" class="py-2 d-block">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -35,8 +35,7 @@
           <h2 class="ftco-heading-2">Get in touch now!</h2>
           <div class="block-23 mb-3">
             <ul>
-              <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San
-                  Francisco, California, USA</span></li>
+              <li><span class="icon icon-map-marker"></span><span class="text">18B Afikpo Housing Estate, Afikpo North L.G.A</span></li>
               <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 803-888-3919</span></a></li>
               <li><a href="#"><span class="icon icon-envelope"></span><span
                     class="text">services@ekemarketonline.com</span></a>
