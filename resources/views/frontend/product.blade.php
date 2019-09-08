@@ -54,7 +54,14 @@
                 <div>Phone : {{$products->shop->user->phone}}</div>
 
                 <hr>
-            <p><a href="{{ route('index') }}" class="btn btn-black py-3 px-5">Continue to Shop</a></p>
+               
+                    <strong >
+                        <h5 style="color:red">Caution!</h5>
+                    </strong>
+                    Do not make payment until this product is supplied to you.
+                
+                <hr>
+                <p><a href="{{ route('index') }}" class="btn btn-black py-3 px-5">Continue to Shop</a></p>
             </div>
         </div>
     </div>
