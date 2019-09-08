@@ -101,7 +101,27 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $formInput=$request->except('image');
+        $this->validate($request,[
+            'name'=>'required|string',
+            'price'=>'required',
+            'description'=>'required|string',
+            'shop_id'=>'required',
+            'category_id'=>'required',
+            'image'=>'required|image|mimes:png,jpg,jpeg|max:10000',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image=$request->file('image');
+            $imageName=time().'.'.$image->getClientOriginalExtension();
+            Image::make($image)->resize(300,300)->save(public_path('product_images/'.$imageName));
+
+            $formInput['image']=$imageName;
+        }
+
+        Product::save($formInput);
+
+        return redirect()->route('product.index');
     }
 
     /**
