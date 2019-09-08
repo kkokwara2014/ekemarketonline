@@ -54,12 +54,19 @@
                 <div>Phone : {{$products->shop->user->phone}}</div>
 
                 <hr>
-               
-                    <strong >
-                        <h5 style="color:red">Caution!</h5>
-                    </strong>
-                    Do not make payment until this product is supplied to you.
-                
+
+                <strong>
+                    <h5 style="color:red">Caution!</h5>
+                </strong>
+
+                <h6 style="color:black">Buyer : </h6>
+                Do not make payment until this product is supplied to you.
+                <br><br>
+                <h6 style="color:black">Seller : </h6>
+                Confirm payment before closing the transaction.
+
+
+
                 <hr>
                 <p><a href="{{ route('index') }}" class="btn btn-black py-3 px-5">Continue to Shop</a></p>
             </div>

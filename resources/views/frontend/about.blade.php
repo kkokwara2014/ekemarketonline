@@ -38,10 +38,15 @@
             levels of protection on the part of the Buyer and the Seller in line with existing demand and supply
             policies of Nigeria.
           </p>
-          <p style="text-align: justify">But nothing the copy said could convince her and so it didn’t take long until a
-            few insidious Copy Writers
-            ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her
-            for their.</p>
+          <p style="text-align: justify">
+            <strong>
+              <h5 style="color:red">Caution!</h5>
+            </strong>
+            We strongly advice that Buyers should not pay for any product until supplied and duly delivered. 
+            Conversely, Sellers are to confirm payment before closing any transaction. <br>
+            By this, Done-Right Systems Inc., will not play a third party role and should not be held responsible
+            for any transaction that does not comply with the advice above.
+          </p>
           <p><a href="#" class="btn btn-primary">Shop now</a></p>
         </div>
       </div>
