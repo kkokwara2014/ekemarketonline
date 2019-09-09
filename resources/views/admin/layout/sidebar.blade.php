@@ -16,8 +16,8 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
 
-      <li class="active treeview">
-        <a href="#">
+    <li>
+        <a href="{{route('dashboard.index')}}">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           <span class="pull-right-container">
             {{-- <i class="fa fa-angle-left pull-right"></i> --}}
@@ -32,27 +32,13 @@
 
       <li><a href="{{route('user.profile')}}"><i class="fa fa-picture-o"></i> My Profile Photo</a></li>
 
-      {{-- <li class="treeview">
-        <a href="#">
-          <i class="fa fa-university"></i>
-          <span>Shop</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-                   
-          
-        </ul>
-      </li> --}}
-      
       <li><a href="{{ route('shop.index') }}"><i class="fa fa-university"></i> Shop</a></li>
       <li><a href="{{ route('product.index') }}"><i class="fa fa-lemon-o"></i> Product</a></li>
 
       <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
-      
+
       @if (Auth::user()->role->id==1)
-    <li><a href="{{ route('shopowner.all')}}"><i class="fa fa-users"></i> Shop Owners</a></li>
+      <li><a href="{{ route('shopowner.all')}}"><i class="fa fa-users"></i> Shop Owners</a></li>
       <li><a href="{{ route('admins.all')}}"><i class="fa fa-user-plus"></i> Admins</a></li>
       @endif
     </ul>
