@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 10 2019 00:03:26 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/layout/navbar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-9-8-2019-23-33-12.txt
+* app/Http/Controllers/SearchController.php
+* resources/views/frontend/productsearch.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

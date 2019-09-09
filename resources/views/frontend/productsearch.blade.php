@@ -11,18 +11,19 @@
         <div class="row justify-content-center mb-3 pb-3">
             <div class="col-md-12 heading-section text-center ftco-animate">
                 {{-- <span class="subheading">Featured Products</span> --}}
-                <h2 class="mb-4">Searched Products</h2>
+                <h2 class="mb-4">Product Search</h2>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
             </div>
         </div>
     </div>
     <div class="container">
+
         <div class="row">
-
             @if (isset($details))
-            <p>The search results for your request <b>{{$query}}</b> are : </p>
-
-            @forelse ($products->chunk(4) as $chunk)
+            {{-- <p>The search results for your request <b>{{$query}}</b> are : </p>
+           <hr>
+           <br> --}}
+            @forelse ($details->chunk(4) as $chunk)
             @foreach ($chunk as $product)
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
@@ -39,49 +40,36 @@
                                         class="price-sale">&#8358; {{$product->price}}</span></p>
                             </div>
                         </div>
-                        {{-- <div>
-							<hr>
-							Call {{$product->shop->user->phone}}
-                    </div> --}}
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart" title="Add to Cart"></i></span>
-                            </a>
 
-                            <a href="{{ route('frontend.product.show',$product->id) }}"
-                                class="heart d-flex justify-content-center align-items-center" title="View Details">
-                                <span><i class="ion-ios-eye"></i></span>
-                            </a>
+                        <div class="bottom-area d-flex px-3">
+                            <div class="m-auto d-flex">
+                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                    <span><i class="ion-ios-cart" title="Add to Cart"></i></span>
+                                </a>
+
+                                <a href="{{ route('frontend.product.show',$product->id) }}"
+                                    class="heart d-flex justify-content-center align-items-center" title="View Details">
+                                    <span><i class="ion-ios-eye"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             @endforeach
             @empty
             {{-- <p class="alert alert-info">No Product has been added!</p> --}}
             @endforelse
 
-            @foreach ($details->chunk(4) as $chunk)
-                @foreach ($chunk as $product)
-                    
-                @endforeach
-            @endforeach
-
             @elseif(isset($message))
-            <p>{{$message}}</p>
+            <p class="alert alert-danger">{{$message}}</p>
             @endif
 
+          {{-- </div> --}}
 
+            {{-- <p style="text-align: right; color: green;">{{$details->links()}}</p> --}}
         </div>
-
-
-
-
-    </div>
-
-    <p style="text-align: right; color: green;">{{$products->links()}}</p>
-    </div>
 </section>
 
 <hr>

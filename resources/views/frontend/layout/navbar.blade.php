@@ -75,8 +75,8 @@
         </li>
         <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
         <li class="nav-item"><a href="{{ route('contact.create') }}" class="nav-link">Contact</a></li>
-        {{-- <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign In</a></li>
-        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Sign Up</a></li> --}}
+        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
 
       </ul>
     </div>
