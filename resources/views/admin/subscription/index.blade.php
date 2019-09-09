@@ -25,44 +25,27 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Subscri. Year</th>
+                                    <th>Subscri. Date</th>
                                     <th>Amount</th>
-                                    <th>Evidence</th>
+                                    <th>Created</th>
+                                   
                                     <th>Download</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($products as $product)
-                                @if (auth::user()->id==$product->shop->user_id)
+                                @foreach ($subscribers as $subscriber)
+                                @if (auth::user()->id==$subscriber->user_id)
 
                                 <tr>
 
-                                    <td>{{$product->name}}</td>
-                                    <td>&#8358; {{$product->price}}</td>
-                                    <td>{{$product->category->name}}</td>
-                                    <td><a href="{{ route('product.show',$product->id) }}"><span
-                                                class="fa fa-eye fa-2x text-primary"></span></a></td>
-
-                                    <td><a href="{{ route('product.edit',$product->id) }}"><span
-                                                class="fa fa-edit fa-2x text-primary"></span></a></td>
-                                    <td>
-                                        <form id="delete-form-{{$product->id}}" style="display: none"
-                                            action="{{ route('product.destroy',$product->id) }}" method="post">
-                                            {{ csrf_field() }}
-                                            {{method_field('DELETE')}}
-                                        </form>
-                                        <a href="" onclick="
-                                                            if (confirm('Are you sure you want to delete this?')) {
-                                                                event.preventDefault();
-                                                            document.getElementById('delete-form-{{$product->id}}').submit();
-                                                            } else {
-                                                                event.preventDefault();
-                                                            }
-                                                        "><span class="fa fa-trash fa-2x text-danger"></span>
-                                        </a>
-
-                                    </td>
-
+                                    <td>{{strtoupper($subscriber->user->lastname).', '.$subscriber->user->firstname}}</td>
+                                    <td>{{$subscriber->user->email}}</td>
+                                    <td>{{$subscriber->user->phone}}</td>
+                                    <td>{{$subscriber->subscriptionyear}}</td>
+                                    <td>&#8358;{{$subscriber->amount}}</td>
+                                    <td><a href="#" class="btn btn-success btn-sm btn-block"><span class="fa fa-download"></span> Download</a></td>
+                                    
+                                    
                                 </tr>
 
                                 @endif
@@ -70,13 +53,13 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Subscri. Year</th>
-                                    <th>Amount</th>
-                                    <th>Evidence</th>
-                                    <th>Download</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Subscri. Date</th>
+                                        <th>Amount</th>
+                                       
+                                        <th>Download</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -94,6 +77,7 @@
 
                 <form action="{{ route('subscription.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
+
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -103,42 +87,19 @@
                         <div class="modal-body">
                             <div>
                                 <label for="">Payment Date</label>
-                                <input type="date" class="form-control" name="subscriptiondate">
+                                <input type="date" class="form-control" name="subscriptionyear">
                             </div>
                             <div>
-                                <label for="">Product Price</label>
-                                <input type="text" class="form-control" name="amount" placeholder="Product Price"
+                                <label for="">Amount</label>
+                                <input type="text" class="form-control" name="amount" placeholder="Subscription Amount"
                                     maxlength="6">
                             </div>
+                            
+                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                            
                             <div>
-                                <label for="">Category</label>
-                                <select name="category_id" class="form-control">
-                                    <option selected="disabled">Select Category</option>
-                                    @foreach ($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">Shop</label>
-                                <select name="shop_id" class="form-control">
-                                    <option selected="disabled">Select Shop</option>
-                                    @foreach ($shops as $shop)
-                                    @if (Auth::user()->id==$shop->user->id)
-                                    <option value="{{$shop->id}}">{{$shop->businessname.' - '.$shop->shopnumber}}
-                                    </option>
-                                    @endif
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="">Description</label>
-                                <textarea name="description" class="form-control" cols="10" rows="3"></textarea>
-                            </div>
-                            <div>
-                                <label for="">Upload Product Image</label>
-                                <input type="file" name="image">
+                                <label for="">Upload Subscription Evidence</label>
+                                <input type="file" name="imageevidence">
                             </div>
                         </div>
                         <div class="modal-footer">

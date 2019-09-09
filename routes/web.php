@@ -59,6 +59,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::resource('shop','ShopController');
     Route::resource('product','ProductController');
     Route::resource('subscription','SubscriptionController');
+    
     Route::get('user/profile','UserController@profileimage')->name('user.profile');
     Route::post('user/profile','UserController@updateprofileimage')->name('user.profile.update');
     
