@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 09 2019 20:31:37 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/layout/header.blade.php
+* resources/views/frontend/about.blade.php
+* resources/views/frontend/layout/header.blade.php
+
+
+Created files:
+* .autogit/logs/log-9-8-2019-16-38-15.txt
+* public/admin_assets/dist/img/ekm_logo.png
+* public/bootstrap_assets/images/ekm_logo.png
+
+
+Deleted files:
+
+
+Renamed files:

@@ -61,6 +61,6 @@ class LoginController extends Controller
     {
         $this->guard()->logout();
 
-        return redirect('/');
+        return redirect(route('login'));
     }
 }

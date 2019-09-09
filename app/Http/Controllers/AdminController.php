@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Category;
+use App\Product;
+use App\Shop;
+use App\Subscription;
 
 class AdminController extends Controller
 {
@@ -17,7 +21,15 @@ class AdminController extends Controller
     {
 
         $user = Auth::user();
-        return view('admin.index', compact('user'));
+
+        $allCategories=Category::count();
+        $allShops=Shop::count();
+        $allSubscriptions=Subscription::count();
+        $allProducts=Product::count();
+        $allShopOwners=User::where('role_id',2)->count();
+        $allAdmins=User::where('role_id',1)->count();
+
+        return view('admin.index', compact('user','allCategories','allShops','allSubscriptions','allProducts','allShopOwners','allAdmins'));
     }
 
     public function admins()
