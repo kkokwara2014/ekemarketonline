@@ -22,7 +22,8 @@
 			@foreach ($chunk as $product)
 			<div class="col-md-6 col-lg-3 ftco-animate">
 				<div class="product">
-					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid" src="{{url('product_images',$product->image)}}">
+					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid"
+							src="{{url('product_images',$product->image)}}">
 						{{-- <span class="status">30%</span> --}}
 						<div class="overlay"></div>
 					</a>
@@ -32,34 +33,37 @@
 							<div class="pricing">
 								<p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span
 										class="price-sale">&#8358; {{$product->price}}</span></p>
-							</div>						
+							</div>
 						</div>
 						{{-- <div>
 							<hr>
 							Call {{$product->shop->user->phone}}
-						</div> --}}
-						<div class="bottom-area d-flex px-3">
-							<div class="m-auto d-flex">
+					</div> --}}
+					<div class="bottom-area d-flex px-3">
+						<div class="m-auto d-flex">
+							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+								<span><i class="ion-ios-cart" title="Add to Cart"></i></span>
+							</a>
 
-								<a href="{{ route('frontend.product.show',$product->id) }}"
-									class="heart d-flex justify-content-center align-items-center" title="View Details">
-									<span><i class="ion-ios-eye"></i></span>
-								</a>
-							</div>
+							<a href="{{ route('frontend.product.show',$product->id) }}"
+								class="heart d-flex justify-content-center align-items-center" title="View Details">
+								<span><i class="ion-ios-eye"></i></span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			@endforeach
-			@empty
-			<p class="alert alert-info">No Product has been added!</p>
-			@endforelse
-
-
 		</div>
 
-		<p style="text-align: right; color: green;">{{$products->links()}}</p>
+		@endforeach
+		@empty
+		<p class="alert alert-info">No Product has been added!</p>
+		@endforelse
+
+
+	</div>
+
+	<p style="text-align: right; color: green;">{{$products->links()}}</p>
 	</div>
 </section>
 

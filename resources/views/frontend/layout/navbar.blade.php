@@ -33,7 +33,24 @@
     </button>
 
     <div class="collapse navbar-collapse" id="ftco-nav">
+       
+            <div class="row">
+                <div class="col-md-3"></div>
+              <div class="col-md-7">
+                <form action="#" class="subscribe-form" method="POST">
+                  <div class="form-group d-flex">
+                    <input type="text" class="form-control-sm" placeholder="Search Product">
+                    
+                    {{-- <button type="submit" class="submit px-2">Search</button> --}}
+                    <input type="submit" value="Search" class="submit px-2">
+                  </div>
+                </form>
+              </div>
+            </div>
+  
+         
       <ul class="navbar-nav ml-auto">
+        
         <li class="nav-item active"><a href="{{ route('index') }}" class="nav-link"><span class="ion-ios-home"
               style="font-size: 13px;"></span> </a></li>
 
@@ -46,7 +63,7 @@
               @forelse ($categories->chunk(3) as $chunk)
               @foreach ($chunk as $category)
               <div class="col-md-4">
-              <a class="dropdown-item" href="{{ route('frontend.category.show',$category->id) }}">
+                <a class="dropdown-item" href="{{ route('frontend.category.show',$category->id) }}">
                   <h6>{{$category->name}}</h6>
                 </a>
               </div>
@@ -59,8 +76,8 @@
         </li>
         <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
         <li class="nav-item"><a href="{{ route('contact.create') }}" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign In</a></li>
-        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Sign Up</a></li>
+        {{-- <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign In</a></li>
+        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Sign Up</a></li> --}}
 
       </ul>
     </div>
