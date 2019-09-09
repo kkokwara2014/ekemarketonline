@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 09 2019 22:02:34 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-9-8-2019-21-32-27.txt
+
+
+Deleted files:
+* public/user_images/1567931878_jpg
+* public/user_images/1567967090.jpg
+* resources/views/admin/shop/myshop.blade.php
+
+
+Renamed files:
