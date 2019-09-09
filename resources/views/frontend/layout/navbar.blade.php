@@ -33,24 +33,23 @@
     </button>
 
     <div class="collapse navbar-collapse" id="ftco-nav">
-       
-            <div class="row">
-                <div class="col-md-3"></div>
-              <div class="col-md-7">
-                <form action="#" class="subscribe-form" method="POST">
-                  <div class="form-group d-flex">
-                    <input type="text" class="form-control-sm" placeholder="Search Product">
-                    
-                    {{-- <button type="submit" class="submit px-2">Search</button> --}}
-                    <input type="submit" value="Search" class="submit px-2">
-                  </div>
-                </form>
-              </div>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-7">
+          <form action="{{route('search.product')}}" class="subscribe-form" method="POST">
+            {{ csrf_field() }}
+            <div class="form-group d-flex">
+              <input type="text" name="productname" class="form-control-sm" placeholder="Enter Product name">
+              <input type="submit" value="Search" class="submit px-2">
             </div>
-  
-         
+          </form>
+        </div>
+      </div>
+
+
       <ul class="navbar-nav ml-auto">
-        
+
         <li class="nav-item active"><a href="{{ route('index') }}" class="nav-link"><span class="ion-ios-home"
               style="font-size: 13px;"></span> </a></li>
 

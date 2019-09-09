@@ -44,6 +44,9 @@ Route::get('/product/{id}/show', 'FrontController@productSingle')->name('fronten
 Route::get('/category/{id}/show', 'FrontController@showprodbycategory')->name('frontend.category.show');
 
 
+Route::post('/search/product', 'SearchController@searchproduct')->name('search.product');
+
+
 Route::resource('contact','ContactController');
 
 
