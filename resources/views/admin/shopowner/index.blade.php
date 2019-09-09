@@ -43,7 +43,8 @@
                                     <td>{{$shopowner->firstname}}</td>
                                     <td>{{$shopowner->email}}</td>
                                     <td>{{$shopowner->phone}}</td>
-                                    <td><a href="{{ route('shopowner.show',$shopowner->id) }}"><span
+                                    {{-- {{ route('shopowner.show',$shopowner->id) }} --}}
+                                    <td><a href="#"><span
                                                 class="fa fa-eye fa-2x text-primary"></span></a></td>
                                     <td>
                                         @if ($shopowner->isactive==1)

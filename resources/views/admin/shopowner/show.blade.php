@@ -20,49 +20,43 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-5">
-                                <img src="{{url('user_images',$shopowner->user->userimage)}}" alt=""
+                                <img src="{{url('user_images',$shopperson->user->userimage)}}" alt=""
                                     class="img-responsive img-rounded" width="250" height="250">
 
                             </div>
                             <div class="col-md-7">
                                 <p>
-                                    <h2>{{$shopowner->name}}</h2>
+                                    <h2>{{strtoupper($shopperson->user->lastname).', '.$shopperson->user->firstname}}</h2>
                                 </p>
                                 <hr>
-                                <div>Name : {{strtoupper($shopowner->user->lastname).', '.$shopowner->user->firstname}}
-                                </div>
-                                <div>Email : {{$shopowner->user->email}} </div>
-                                <div>Phone : {{$shopowner->user->phone}} </div>
-                                <div>Business Name : {{$shopowner->shop->businessname.' - '.$product->shop->shopnumber}}
-                                </div>
 
-                                <br>
-                                <div>
-                                    Shop Owner :
-                                    <strong>{{strtoupper($product->shop->user->lastname).', '.$product->shop->user->firstname}}</strong>
-                                </div>
-                                <div>Phone : {{$product->shop->user->phone}}</div>
                             </div>
+                            <div>Email : {{$shopperson->user->email}} </div>
+                            <div>Phone : {{$shopperson->user->phone}} </div>
+                            <div>Business Name : {{$shopperson->businessname}}</div>
+                            <div>Business Address : {{$shopperson->shopaddress}}</div>
+
+                            <br>
 
                         </div>
 
                     </div>
-                    <!-- /.box-body -->
+
                 </div>
-                <!-- /.box -->
+                <!-- /.box-body -->
             </div>
+            <!-- /.box -->
         </div>
+</div>
+
+</section>
+<!-- /.Left col -->
+<!-- right col (We are only adding the ID to make the widgets sortable)-->
+{{-- <section class="col-lg-5 connectedSortable"> --}}
 
 
-
-    </section>
-    <!-- /.Left col -->
-    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-    {{-- <section class="col-lg-5 connectedSortable"> --}}
-
-
-    {{-- </section> --}}
-    <!-- right col -->
+{{-- </section> --}}
+<!-- right col -->
 </div>
 <!-- /.row (main row) -->
 
