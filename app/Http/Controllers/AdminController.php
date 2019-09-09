@@ -14,9 +14,34 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $pageTitle='Dashboard';
+        
         $user=Auth::user();
-        return view('admin.index',compact('pageTitle','user'));
+        return view('admin.index',compact('user'));
+    }
+
+    public function shopowners(){
+        $shopowners=User::where('role_id',2)->get();
+        return view('admin.shopowner.index',array('user'=>Auth::user()),compact('shopowners'));
+    }
+    public function show($id){
+        $shopowners=User::find($id);
+        return view('admin.shopowner.show',array('user'=>Auth::user()),compact('shopowners'));
+    }
+    public function activate($id){
+
+        $shopowner=User::find($id);
+        $shopowner->isactive='1';
+        $shopowner->save();
+        
+        return redirect(route('shopowner.all'));
+    }
+    public function deactivate($id){
+
+        $shopowner=User::find($id);
+        $shopowner->isactive='0';
+        $shopowner->save();
+
+        return redirect(route('shopowner.all'));
     }
 
     /**
@@ -40,16 +65,7 @@ class AdminController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

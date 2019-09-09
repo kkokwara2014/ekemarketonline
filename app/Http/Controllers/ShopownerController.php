@@ -22,7 +22,7 @@ class ShopownerController extends Controller
         $shopowner->isactive='1';
         $shopowner->save();
         
-        return back();
+        return redirect(route('shopowner.all'));
     }
     public function deactivate($id){
 
@@ -30,6 +30,6 @@ class ShopownerController extends Controller
         $shopowner->isactive='0';
         $shopowner->save();
 
-        return back();
+        return redirect(route('shopowner.all'));
     }
 }
