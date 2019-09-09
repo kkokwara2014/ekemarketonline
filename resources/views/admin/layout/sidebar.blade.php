@@ -52,7 +52,7 @@
       <li><a href="{{ route('subscription.index') }}"><i class="fa fa-money"></i> Subscription</a></li>
       
       @if (Auth::user()->role->id==1)
-      <li><a href="#"><i class="fa fa-users"></i> Shop Owners</a></li>
+    <li><a href="{{ route('shopowner.all')}}"><i class="fa fa-users"></i> Shop Owners</a></li>
       <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
       @endif
     </ul>

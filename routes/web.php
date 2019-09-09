@@ -55,4 +55,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::resource('subscription','SubscriptionController');
     Route::get('user/profile','UserController@profileimage')->name('user.profile');
     Route::post('user/profile','UserController@updateprofileimage')->name('user.profile.update');
+    
+    Route::get('shopowners','ShopownerController@shopowners')->name('shopowner.all');
+    Route::get('shopowners/{id}/show','ShopownerController@show')->name('shopowner.show');
+    Route::get('shopowner/{id}/activate','ShopownerController@activate')->name('shopowner.activate');
 });
