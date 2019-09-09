@@ -89,7 +89,8 @@
                         <div class="modal-body">
                             <div>
                                 <label for="">Payment Date</label>
-                                <input type="date" class="form-control" name="subscriptionyear">
+                                <input type="text" class="form-control" name="subscriptionyear" id="datepicker">
+                                {{-- <input type="date" class="form-control" name="subscriptionyear"> --}}
                             </div>
                             <div>
                                 <label for="">Amount</label>

@@ -257,6 +257,11 @@
         'info'        : true,
         'autoWidth'   : false
       })
+
+      //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
     })
 </script>
 </body>
