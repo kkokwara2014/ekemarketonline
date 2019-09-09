@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 09 2019 14:51:11 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/layout/footer.blade.php
+* resources/views/admin/subscription/index.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
