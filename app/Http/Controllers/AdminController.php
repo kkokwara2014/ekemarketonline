@@ -15,31 +15,35 @@ class AdminController extends Controller
      */
     public function index()
     {
-        
-        $user=Auth::user();
-        return view('admin.index',compact('user'));
+
+        $user = Auth::user();
+        return view('admin.index', compact('user'));
     }
 
-    public function admins(){
-        $admins=User::where('role_id',1)->get();
-        return view('admin.admins.index',array('user'=>Auth::user()),compact('admins'));
+    public function admins()
+    {
+        $admins = User::where('role_id', 1)->get();
+        return view('admin.admins.index', array('user' => Auth::user()), compact('admins'));
     }
-    public function show($id){
-        $admins=User::find($id);
-        return view('admin.admins.show',array('user'=>Auth::user()),compact('admins'));
+    public function show($id)
+    {
+        $admins = User::find($id);
+        return view('admin.admins.show', array('user' => Auth::user()), compact('admins'));
     }
-    public function activate($id){
+    public function activate($id)
+    {
 
-        $admin=User::find($id);
-        $admin->isactive='1';
+        $admin = User::find($id);
+        $admin->isactive = '1';
         $admin->save();
-        
+
         return redirect(route('admins.all'));
     }
-    public function deactivate($id){
+    public function deactivate($id)
+    {
 
-        $admin=User::find($id);
-        $admin->isactive='0';
+        $admin = User::find($id);
+        $admin->isactive = '0';
         $admin->save();
 
         return redirect(route('admins.all'));
@@ -63,10 +67,29 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'lastname' => 'required|string',
+            'firstname' => 'required|string',
+            'email' => 'required|email|unique:users',
+            'phone' => 'required',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+
+        $user = new User;
+        $user->lastname = $request->lastname;
+        $user->firstname = $request->firstname;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = bcrypt($request->password);
+        $user->role_id = $request->role_id;
+        $user->isactive = '1';
+
+        $user->save();
+
+        return redirect(route('admins.all'))->with('success', 'Admin created successfully!');
     }
 
-    
+
 
     /**
      * Show the form for editing the specified resource.

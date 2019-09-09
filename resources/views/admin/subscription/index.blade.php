@@ -43,6 +43,7 @@
                                     <td>{{$subscriber->user->phone}}</td>
                                     <td>{{$subscriber->subscriptionyear}}</td>
                                     <td>&#8358;{{$subscriber->amount}}</td>
+                                    <td>{{$subscriber->created_at->diffForHumans()}}</td>
                                     <td><a href="#" class="btn btn-success btn-sm btn-block"><span class="fa fa-download"></span> Download</a></td>
                                     
                                     
@@ -58,6 +59,7 @@
                                         <th>Phone</th>
                                         <th>Subscri. Date</th>
                                         <th>Amount</th>
+                                        <th>Created</th>
                                        
                                         <th>Download</th>
                                 </tr>

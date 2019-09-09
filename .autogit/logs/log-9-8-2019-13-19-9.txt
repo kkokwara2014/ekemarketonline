@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 09 2019 13:19:09 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/SubscriptionController.php
+* resources/views/admin/subscription/index.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-9-8-2019-12-48-58.txt
+* public/subscription_evidence/1568031163.jpg
+* public/subscription_evidence/1568031182.jpg
+
+
+Deleted files:
+
+
+Renamed files:

@@ -50,6 +50,8 @@ Route::resource('contact','ContactController');
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminController@index')->name('dashboard.index');
     Route::get('admins', 'AdminController@admins')->name('admins.all');
+    Route::post('admin/create', 'AdminController@store')->name('admins.store');
+
     Route::get('admins/{id}/show', 'AdminController@show')->name('admins.show');
     Route::post('admins/{id}/activate', 'AdminController@activate')->name('admins.activate');
     Route::post('admins/{id}/deactivate', 'AdminController@deactivate')->name('admins.deactivate');
@@ -59,7 +61,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::resource('shop','ShopController');
     Route::resource('product','ProductController');
     Route::resource('subscription','SubscriptionController');
-    
+
     Route::get('user/profile','UserController@profileimage')->name('user.profile');
     Route::post('user/profile','UserController@updateprofileimage')->name('user.profile.update');
     
