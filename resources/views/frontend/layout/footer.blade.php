@@ -11,12 +11,16 @@
       <div class="col-md">
         <div class="ftco-footer-widget mb-3">
           <h2 class="ftco-heading-2">Ekemarketonline</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+          <p style="text-align: justify">
+            Eke is a major market day in many parts of Igbo land in Nigeria. In a bid to bring buying and selling to a
+            digital perspective, Done-Right Systems Incorporated decided to bring the market activities to a click away
+            from your mobile devices and computer related gadgets.
+          </p>
+          {{-- <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
             <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
             <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
             <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-          </ul>
+          </ul> --}}
         </div>
       </div>
       <div class="col-md">
@@ -24,23 +28,23 @@
           <h2 class="ftco-heading-2">Menu</h2>
           <ul class="list-unstyled">
             <li><a href="{{ route('index') }}" class="py-2 d-block"><span class="ion-ios-home"
-              style="font-size: 13px;"></span></a></li>
+                  style="font-size: 13px;"></span></a></li>
             <li><a href="{{ route('about') }}" class="py-2 d-block">About</a></li>
             <li><a href="{{ route('contact.create') }}" class="py-2 d-block">Contact Us</a></li>
           </ul>
         </div>
       </div>
-      
+
       <div class="col-md">
         <div class="ftco-footer-widget mb-3">
           <h2 class="ftco-heading-2">Get in touch now!</h2>
           <div class="block-23 mb-3">
             <ul>
               <li><span class="icon icon-map-marker"></span><span class="text">
-                Done-Right Systems Inc. <br>
-                Flat 18B Afikpo Housing Estate,<br> 
-                Afikpo North L.G.A., Ebonyi State.
-              </span></li>
+                  Done-Right Systems Inc. <br>
+                  Flat 18B Afikpo Housing Estate,<br>
+                  Afikpo North L.G.A., Ebonyi State.
+                </span></li>
               <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 803-888-3919</span></a></li>
               <li><a href="#"><span class="icon icon-envelope"></span><span
                     class="text">services@ekemarketonline.com</span></a>

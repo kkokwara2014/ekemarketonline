@@ -66,9 +66,6 @@
             <p class="alert alert-danger">{{$message}}</p>
             @endif
 
-          {{-- </div> --}}
-
-            {{-- <p style="text-align: right; color: green;">{{$details->links()}}</p> --}}
         </div>
 </section>
 

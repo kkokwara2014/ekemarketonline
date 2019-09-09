@@ -15,8 +15,8 @@
           </div>
           <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
             <span class="text">
-              <a href="{{ route('login') }}" class="text">Sign In</a> | <a href="{{ route('register') }}"
-                class="text">Sign Up</a>
+              <a href="{{ route('login') }}" class="text">Login</a> | <a href="{{ route('register') }}"
+                class="text">Register</a>
             </span>
           </div>
         </div>
@@ -35,12 +35,12 @@
     <div class="collapse navbar-collapse" id="ftco-nav">
 
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-7">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
           <form action="{{route('search.product')}}" class="subscribe-form" method="POST">
             {{ csrf_field() }}
             <div class="form-group d-flex">
-              <input type="text" name="productname" class="form-control-sm" placeholder="Enter Product name">
+            <input type="text" name="productname" value="{{old('productname')}}" class="form-control-sm" placeholder="Enter Product name">
               <input type="submit" value="Search" class="submit px-2">
             </div>
           </form>
