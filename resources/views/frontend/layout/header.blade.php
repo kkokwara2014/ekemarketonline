@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <title> @yield('title','Eke Market Online')</title>
+
+    <link rel="shortcut icon" type="image/png" href="{{url('bootstrap_assets/images/','ekm_logo.png')}}"/>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     

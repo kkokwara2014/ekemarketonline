@@ -47,7 +47,7 @@
             By this, Done-Right Systems Inc., will not play a third party role and should not be held responsible
             for any transaction that does not comply with the advice above.
           </p>
-          <p><a href="#" class="btn btn-primary">Shop now</a></p>
+        <p><a href="{{route('index')}}" class="btn btn-primary">Shop now</a></p>
         </div>
       </div>
     </div>
