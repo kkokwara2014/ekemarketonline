@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -19,29 +20,29 @@ class AdminController extends Controller
         return view('admin.index',compact('user'));
     }
 
-    public function shopowners(){
-        $shopowners=User::where('role_id',2)->get();
-        return view('admin.shopowner.index',array('user'=>Auth::user()),compact('shopowners'));
+    public function admins(){
+        $admins=User::where('role_id',1)->get();
+        return view('admin.admins.index',array('user'=>Auth::user()),compact('admins'));
     }
     public function show($id){
-        $shopowners=User::find($id);
-        return view('admin.shopowner.show',array('user'=>Auth::user()),compact('shopowners'));
+        $admins=User::find($id);
+        return view('admin.admins.show',array('user'=>Auth::user()),compact('admins'));
     }
     public function activate($id){
 
-        $shopowner=User::find($id);
-        $shopowner->isactive='1';
-        $shopowner->save();
+        $admin=User::find($id);
+        $admin->isactive='1';
+        $admin->save();
         
-        return redirect(route('shopowner.all'));
+        return redirect(route('admins.all'));
     }
     public function deactivate($id){
 
-        $shopowner=User::find($id);
-        $shopowner->isactive='0';
-        $shopowner->save();
+        $admin=User::find($id);
+        $admin->isactive='0';
+        $admin->save();
 
-        return redirect(route('shopowner.all'));
+        return redirect(route('admins.all'));
     }
 
     /**

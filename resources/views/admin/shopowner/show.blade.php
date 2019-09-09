@@ -9,7 +9,7 @@
     <!-- Left col -->
     <section class="col-lg-12 connectedSortable">
         <div>
-            <a href="{{ route('product.index') }}" class="btn btn-success btn-sm">
+            <a href="{{ route('shopowner.all') }}" class="btn btn-success btn-sm">
                 Back</a>
         </div>
         <br>
@@ -20,19 +20,21 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-5">
-                                <img src="{{url('product_images',$product->image)}}" alt=""
+                                <img src="{{url('user_images',$shopowner->user->userimage)}}" alt=""
                                     class="img-responsive img-rounded" width="250" height="250">
 
                             </div>
                             <div class="col-md-7">
                                 <p>
-                                    <h2>{{$product->name}}</h2>
+                                    <h2>{{$shopowner->name}}</h2>
                                 </p>
                                 <hr>
-                                <div>Unit Price : &#8358;{{$product->price}} </div>
-                                <div>Category : {{$product->category->name}} </div>
-                                <div>Description : {{$product->description}} </div>
-                                <div>Found In : {{$product->shop->businessname.' - '.$product->shop->shopnumber}} </div>
+                                <div>Name : {{strtoupper($shopowner->user->lastname).', '.$shopowner->user->firstname}}
+                                </div>
+                                <div>Email : {{$shopowner->user->email}} </div>
+                                <div>Phone : {{$shopowner->user->phone}} </div>
+                                <div>Business Name : {{$shopowner->shop->businessname.' - '.$product->shop->shopnumber}}
+                                </div>
 
                                 <br>
                                 <div>

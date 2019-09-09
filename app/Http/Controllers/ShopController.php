@@ -59,7 +59,8 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        //
+        $shopowner=Shop::find($id);
+        return view('admin.shopowner.show',array('user'=>Auth::user()),compact('shopowner'));
     }
 
     /**

@@ -69,7 +69,7 @@
                                                                 } else {
                                                                     event.preventDefault();
                                                                 }
-                                                            "><span class="fa fa-lock fa-2x text-danger"></span>
+                                                            " class="btn btn-danger btn-sm btn-block">Deactivate
                                         </a>
                                         @else
 
@@ -85,7 +85,7 @@
                                                                 } else {
                                                                     event.preventDefault();
                                                                 }
-                                                            "><span class="fa fa-unlock fa-2x text-success"></span>
+                                                            " class="btn btn-success btn-sm btn-block">Activate
                                         </a>
 
                                         @endif

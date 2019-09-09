@@ -53,7 +53,7 @@
       
       @if (Auth::user()->role->id==1)
     <li><a href="{{ route('shopowner.all')}}"><i class="fa fa-users"></i> Shop Owners</a></li>
-      <li><a href="#"><i class="fa fa-user-plus"></i> Admins</a></li>
+      <li><a href="{{ route('admins.all')}}"><i class="fa fa-user-plus"></i> Admins</a></li>
       @endif
     </ul>
   </section>

@@ -34,19 +34,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($shopowners as $shopowner)
+                                @foreach ($admins as $admin)
 
 
                                 <tr>
 
-                                    <td>{{$shopowner->lastname}}</td>
-                                    <td>{{$shopowner->firstname}}</td>
-                                    <td>{{$shopowner->email}}</td>
-                                    <td>{{$shopowner->phone}}</td>
-                                    <td><a href="{{ route('shopowner.show',$shopowner->id) }}"><span
+                                    <td>{{$admin->lastname}}</td>
+                                    <td>{{$admin->firstname}}</td>
+                                    <td>{{$admin->email}}</td>
+                                    <td>{{$admin->phone}}</td>
+                                    <td><a href="{{ route('admins.show',$admin->id) }}"><span
                                                 class="fa fa-eye fa-2x text-primary"></span></a></td>
                                     <td>
-                                        @if ($shopowner->isactive==1)
+                                        @if ($admin->isactive==1)
                                         <span class="fa fa-check-circle fa-2x text-success"></span>
                                         @else
                                         <span class="fa fa-close fa-2x text-danger"></span>
@@ -55,37 +55,37 @@
                                     </td>
 
                                     <td>
-                                        @if ($shopowner->isactive==1)
+                                        @if ($admin->isactive==1)
 
-                                        <form id="delete-form-{{$shopowner->id}}" style="display: none"
-                                            action="{{ route('shopowner.deactivate',$shopowner->id) }}" method="post">
+                                        <form id="delete-form-{{$admin->id}}" style="display: none"
+                                            action="{{ route('admins.deactivate',$admin->id) }}" method="post">
                                             {{ csrf_field() }}
 
                                         </form>
                                         <a href="" onclick="
                                                                 if (confirm('Are you sure you want to Deactivate this?')) {
                                                                     event.preventDefault();
-                                                                document.getElementById('delete-form-{{$shopowner->id}}').submit();
+                                                                document.getElementById('delete-form-{{$admin->id}}').submit();
                                                                 } else {
                                                                     event.preventDefault();
                                                                 }
-                                                            "><span class="fa fa-lock fa-2x text-danger"></span>
+                                                            " class="btn btn-danger btn-sm btn-block">Deactivate
                                         </a>
                                         @else
 
-                                        <form id="delete-form-{{$shopowner->id}}" style="display: none"
-                                            action="{{ route('shopowner.activate',$shopowner->id) }}" method="post">
+                                        <form id="delete-form-{{$admin->id}}" style="display: none"
+                                            action="{{ route('admins.activate',$admin->id) }}" method="post">
                                             {{ csrf_field() }}
 
                                         </form>
                                         <a href="" onclick="
                                                                 if (confirm('Are you sure you want to Activate this?')) {
                                                                     event.preventDefault();
-                                                                document.getElementById('delete-form-{{$shopowner->id}}').submit();
+                                                                document.getElementById('delete-form-{{$admin->id}}').submit();
                                                                 } else {
                                                                     event.preventDefault();
                                                                 }
-                                                            "><span class="fa fa-unlock fa-2x text-success"></span>
+                                                            " class="btn btn-success btn-sm btn-block"> Activate
                                         </a>
 
                                         @endif
