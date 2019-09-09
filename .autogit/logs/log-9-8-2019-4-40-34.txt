@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 09 2019 04:40:34 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ShopownerController.php
+* resources/views/admin/layout/sidebar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-9-8-2019-4-10-15.txt
+* resources/views/admin/shopowners/index.blade.php
+* resources/views/admin/shopowners/show.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

@@ -29,13 +29,13 @@
                                     <th>View Details</th>
                                     <th>Status</th>
                                     <th>Action</th>
-                                   
+
 
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($shopowners as $shopowner)
-                               
+
 
                                 <tr>
 
@@ -45,28 +45,41 @@
                                     <td>{{$shopowner->phone}}</td>
                                     <td><a href="{{ route('shopowner.show',$shopowner->id) }}"><span
                                                 class="fa fa-eye fa-2x text-primary"></span></a></td>
-
-                                    <td><a href="{{ route('shopowner.activate',$shopowner->id) }}"><span
-                                                class="fa fa-unlock fa-2x text-success"></span></a></td>
                                     <td>
-                                        
+                                        @if ($shopowner->isactive==1)
+                                        <span class="fa fa-check-circle fa-2x text-success"></span>
+                                        @else
+                                        <span class="fa fa-close fa-2x text-danger"></span>
+                                        @endif
 
                                     </td>
 
+                                    <td>
+                                        @if ($shopowner->isactive==1)
+                                        <a href="{{ route('shopowner.deactivate',$shopowner->id) }}"><span
+                                                class="fa fa-lock fa-2x text-danger"></span>
+                                        </a>
+                                        @else
+                                        <a href="{{ route('shopowner.activate',$shopowner->id) }}"><span
+                                                class="fa fa-unlock fa-2x text-success"></span>
+                                        </a>
+
+                                        @endif
+                                    </td>
                                 </tr>
 
-                               
+
                                 @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
-                                        <th>Surname</th>
-                                        <th>First Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>View Details</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                    <th>Surname</th>
+                                    <th>First Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>View Details</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </tfoot>
                         </table>
