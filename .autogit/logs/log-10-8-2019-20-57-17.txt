@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 10 2019 20:57:17 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* routes/web.php
+* vendor/composer/autoload_classmap.php
+* vendor/composer/autoload_static.php
+
+
+Created files:
+* .autogit/logs/log-10-8-2019-20-27-15.txt
+* app/Buyeraddress.php
+* app/Http/Controllers/BuyeraddressController.php
+* app/Http/Controllers/CheckoutController.php
+* database/migrations/2019_09_10_194302_create_buyeraddresses_table.php
+
+
+Deleted files:
+
+
+Renamed files:

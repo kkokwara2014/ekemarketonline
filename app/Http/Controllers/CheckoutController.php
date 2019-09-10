@@ -8,9 +8,11 @@ class CheckoutController extends Controller
 {
     public function firststep(){
 
+        
+        return view('frontend.checkout.buyercheckout');
     }
 
     public function buyeraddress(){
-        
+
     }
 }
