@@ -34,7 +34,14 @@
                         <tbody>
                             @foreach ($cartItems as $cartitem)
                             <tr class="text-center">
-                                <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                                <td class="product-remove">
+                                    <form action="{{route('cart.destroy',$cartitem->rowId)}}" method="post">
+                                        {{ csrf_field() }}
+                                        {{method_field('DELETE')}}
+
+                                    </form>
+                                    <a href="#"><span class="ion-ios-close"></span></a>
+                                </td>
 
                                 <td class="image-prod">
                                     <a href="#" class="img-prod"><img class="img-fluid"
@@ -52,7 +59,7 @@
 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
-                                    <form action="{{route('cart.update',$cartitem->rowId)}}" method="post">
+                                        <form action="{{route('cart.update',$cartitem->rowId)}}" method="post">
                                             {{ csrf_field() }}
                                             {{method_field('PUT')}}
 
@@ -63,7 +70,8 @@
                                                         max="100">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <input type="submit" class="btn btn-success btn-block btn-sm" style="background-color:olivedrab" value="Ok">
+                                                    <input type="submit" class="btn btn-success btn-block btn-sm"
+                                                        style="background-color:olivedrab" value="Ok">
                                                 </div>
                                             </div>
 
@@ -121,8 +129,8 @@
                 <div class="cart-total mb-3">
                     <h3>Total Amount</h3>
                     <p class="d-flex">
-                        <span>Subtotal</span>
-                        <span>$20.60</span>
+                        <span>Products</span>
+                        <span>{{Cart::count()}}</span>
                     </p>
                     {{-- <p class="d-flex">
                         <span>Delivery</span>
