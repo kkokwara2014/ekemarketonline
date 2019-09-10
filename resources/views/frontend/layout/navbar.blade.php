@@ -81,6 +81,7 @@
         <li class="nav-item"><a href="{{ route('contact.create') }}" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+        <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
       </ul>
     </div>
