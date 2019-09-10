@@ -20,12 +20,12 @@ class SearchController extends Controller
         $productname = $request->productname;
 
         if ($productname != "") {
-            $product = Product::where('name', 'LIKE', '%' . $productname . '%')->orWhere('price', 'LIKE', '%' . $productname . '%')->orWhere('description', 'LIKE', '%' . $productname . '%')->paginate(20);
+            $product = Product::where('name', 'LIKE', '%' . $productname . '%')->orWhere('price', 'LIKE', '%' . $productname . '%')->orWhere('description', 'LIKE', '%' . $productname . '%')->get();
             if (count($product)>0) {
                return view('frontend.productsearch',compact('categories'))->withDetails($product)->withQuery($productname)->with($data);
             }
         }
 
-        return view('frontend.productsearch',compact('categories'))->withMessage('No Product matched your search entry!')->with($data);
+        return view('frontend.productsearch',compact('categories'))->withMessage('No Product matched your entry!')->with($data);
     }
 }
