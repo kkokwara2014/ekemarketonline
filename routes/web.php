@@ -48,6 +48,14 @@ Route::get('/category/{id}/show', 'FrontController@showprodbycategory')->name('f
 //cart area
 Route::resource('/cart', 'CartController');
 
+//Buyer Address
+Route::resource('/buyer/address', 'BuyeraddressController');
+
+
+// checkout
+Route::get('checkout','CheckoutController@firststep')->name('checkout');
+Route::get('buyer/address','CheckoutController@buyeraddress')->name('buyeraddress');
+
 //product search area
 Route::post('/search/product', 'SearchController@searchproduct')->name('search.product');
 
