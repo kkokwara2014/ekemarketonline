@@ -26,7 +26,7 @@
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
                                 <th>Product name</th>
-                                <th>Price</th>
+                                <th>Unit Price</th>
                                 <th>Quantity</th>
                                 <th>Total</th>
                             </tr>
@@ -52,8 +52,9 @@
 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
-                                        <form action="" method="post">
+                                    <form action="{{route('cart.update',$cartitem->rowId)}}" method="post">
                                             {{ csrf_field() }}
+                                            {{method_field('PUT')}}
 
                                             <div class="row">
                                                 <div class="col-md-8">
@@ -62,7 +63,7 @@
                                                         max="100">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <input type="submit" class="btn btn-success btn-block btn-sm" style="background-color: #1c7430" value="Ok">
+                                                    <input type="submit" class="btn btn-success btn-block btn-sm" style="background-color:olivedrab" value="Ok">
                                                 </div>
                                             </div>
 
