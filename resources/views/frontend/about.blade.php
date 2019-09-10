@@ -31,18 +31,21 @@
           </div>
         </div>
         <div class="pb-md-5">
-          <p style="text-align: justify">Eke is a major market day in many Southern States of Nigeria. In a bid to
+          <p style="text-align: justify">Eke is a major market day in many Southern States of Nigeria. 
+             Though urbanization has made most of such markets to now trade on daily basis. 
+            In a bid to
             bring buying and selling to a digital perspective, Done-Right Systems Incorporated decided to bring the
             market activities to a click away from your mobile devices and computer related gadgets. <br>
-            In view of notable online market security challenges, Done-Right Systems Management has tried to create
-            levels of protection on the part of the Buyer and the Seller in line with existing demand and supply
-            policies of Nigeria.
+            
           </p>
           <p style="text-align: justify">
             <strong>
               <h5 style="color:red">Caution!</h5>
             </strong>
-            We strongly advice that Buyers should not pay for any product until supplied and duly delivered. 
+            In view of notable online market security challenges, Done-Right Systems Management has tried to create
+            levels of protection on the part of the Buyer and the Seller in line with existing demand and supply
+            policies of Nigeria. <br>
+            However, we strongly advice that Buyers should not pay for any product until supplied and duly delivered. 
             Conversely, Sellers are to confirm payment before closing any transaction. <br>
             By this, Done-Right Systems Inc., will not play a third party role and should not be held responsible
             for any transaction that does not comply with the advice above.

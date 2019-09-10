@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 10 2019 15:29:06 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/about.blade.php
+* resources/views/frontend/layout/navbar.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
