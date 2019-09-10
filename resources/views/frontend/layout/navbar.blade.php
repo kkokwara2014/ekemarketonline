@@ -26,7 +26,10 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
-    <a class="navbar-brand" href="{{ route('index') }}">EkeMarketOnline</a>
+    <a class="navbar-brand" href="{{ route('index') }}">
+    <img style="margin-top: -5px" src="{{url('bootstrap_assets/images/','ekm_logo.png')}}" alt="logo" width="20px" height="20px">
+      EkeMarketOnline
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="oi oi-menu"></span> Menu
@@ -35,8 +38,8 @@
     <div class="collapse navbar-collapse" id="ftco-nav">
 
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
+        {{-- <div class="col-md-1"></div> --}}
+        <div class="col-md-4">
           <form action="{{route('search.product')}}" class="subscribe-form" method="POST">
             {{ csrf_field() }}
             <div class="form-group d-flex">
@@ -45,6 +48,7 @@
             </div>
           </form>
         </div>
+        <div class="col-md-1"></div>
       </div>
 
 
