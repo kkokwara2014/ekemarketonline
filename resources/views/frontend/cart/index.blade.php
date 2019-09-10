@@ -37,8 +37,8 @@
                                 <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 
                                 <td class="image-prod">
-                                    <a href="#" class="img-prod"><img
-                                            class="img-fluid" src="{{url('product_images',$cartitem->image)}}">
+                                    <a href="#" class="img-prod"><img class="img-fluid"
+                                            src="{{url('product_images',$cartitem->image)}}">
                                         {{-- <img src="{{url('product_images',$cartitem->image)}}"> --}}
                                         {{-- <div class="img" style="background-image:url();"></div> --}}
                                 </td>
@@ -52,8 +52,22 @@
 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="quantity" class="quantity form-control input-number"
-                                            value="1" min="1" max="100">
+                                        <form action="" method="post">
+                                            {{ csrf_field() }}
+
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <input type="text" name="quantity"
+                                                        class="quantity form-control input-number" value="1" min="1"
+                                                        max="100">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="submit" class="btn btn-success btn-block btn-sm" style="background-color: #1c7430" value="Ok">
+                                                </div>
+                                            </div>
+
+                                        </form>
+
                                     </div>
                                 </td>
 
