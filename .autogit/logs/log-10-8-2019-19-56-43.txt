@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 10 2019 19:56:43 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/cart/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-8-2019-18-19-53.txt
+
+
+Deleted files:
+
+
+Renamed files:

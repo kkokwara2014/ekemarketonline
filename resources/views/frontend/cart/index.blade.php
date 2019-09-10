@@ -39,8 +39,15 @@
                                         {{ csrf_field() }}
                                         {{method_field('DELETE')}}
 
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                    <input type="submit" class="btn btn-danger btn-block btn-sm"
+                                                     value="Remove">
+                                                {{-- <button type="submit" class="btn btn-sm btn-danger btn-block">Remove</button> --}}
+                                            </div>
+                                        </div>
+
                                     </form>
-                                    <a href="#"><span class="ion-ios-close"></span></a>
                                 </td>
 
                                 <td class="image-prod">
@@ -142,8 +149,8 @@
                     </p> --}}
                     <hr>
                     <p class="d-flex total-price">
-                        <span>Total</span>
-                        <span>&#8358;{{Cart::total()}}</span>
+                        <span>Sub Total</span>
+                        <span>&#8358;{{Cart::subtotal()}}</span>
                     </p>
                 </div>
                 <p><a href="#" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
