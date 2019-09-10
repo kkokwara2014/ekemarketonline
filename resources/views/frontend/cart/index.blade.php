@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
+<div class="hero-wrap hero-bread"
+    style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -31,19 +32,23 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cartItems as $cartitem)
                             <tr class="text-center">
                                 <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 
                                 <td class="image-prod">
-                                    <div class="img" style="background-image:url(images/product-3.jpg);"></div>
+                                    <a href="#" class="img-prod"><img
+                                            class="img-fluid" src="{{url('product_images',$cartitem->image)}}">
+                                        {{-- <img src="{{url('product_images',$cartitem->image)}}"> --}}
+                                        {{-- <div class="img" style="background-image:url();"></div> --}}
                                 </td>
 
                                 <td class="product-name">
-                                    <h3>Bell Pepper</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries</p>
+                                    <h3>{{$cartitem->name}}</h3>
+                                    <p>{{$cartitem->description}}</p>
                                 </td>
 
-                                <td class="price">$4.90</td>
+                                <td class="price">&#8358;{{$cartitem->price}}</td>
 
                                 <td class="quantity">
                                     <div class="input-group mb-3">
@@ -52,32 +57,11 @@
                                     </div>
                                 </td>
 
-                                <td class="total">$4.90</td>
-                            </tr><!-- END TR-->
+                                <td class="total">&#8358;4.90</td>
+                            </tr>
 
-                            <tr class="text-center">
-                                <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                            @endforeach
 
-                                <td class="image-prod">
-                                    <div class="img" style="background-image:url(images/product-4.jpg);"></div>
-                                </td>
-
-                                <td class="product-name">
-                                    <h3>Bell Pepper</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries</p>
-                                </td>
-
-                                <td class="price">$15.70</td>
-
-                                <td class="quantity">
-                                    <div class="input-group mb-3">
-                                        <input type="text" name="quantity" class="quantity form-control input-number"
-                                            value="1" min="1" max="100">
-                                    </div>
-                                </td>
-
-                                <td class="total">$15.70</td>
-                            </tr><!-- END TR-->
                         </tbody>
                     </table>
                 </div>
@@ -85,7 +69,7 @@
         </div>
         <div class="row justify-content-end">
             <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-                <div class="cart-total mb-3">
+                {{-- <div class="cart-total mb-3">
                     <h3>Coupon Code</h3>
                     <p>Enter your coupon code if you have one</p>
                     <form action="#" class="info">
@@ -95,11 +79,11 @@
                         </div>
                     </form>
                 </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p>
+                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p> --}}
             </div>
             <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-                <div class="cart-total mb-3">
-                    <h3>Estimate shipping and tax</h3>
+                {{-- <div class="cart-total mb-3"> --}}
+                {{-- <h3>Estimate shipping and tax</h3>
                     <p>Enter your destination to get a shipping estimate</p>
                     <form action="#" class="info">
                         <div class="form-group">
@@ -114,32 +98,32 @@
                             <label for="country">Zip/Postal Code</label>
                             <input type="text" class="form-control text-left px-3" placeholder="">
                         </div>
-                    </form>
-                </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p>
+                    </form> --}}
+                {{-- </div> --}}
+                {{-- <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p> --}}
             </div>
             <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
                 <div class="cart-total mb-3">
-                    <h3>Cart Totals</h3>
+                    <h3>Total Amount</h3>
                     <p class="d-flex">
                         <span>Subtotal</span>
                         <span>$20.60</span>
                     </p>
-                    <p class="d-flex">
+                    {{-- <p class="d-flex">
                         <span>Delivery</span>
                         <span>$0.00</span>
                     </p>
                     <p class="d-flex">
                         <span>Discount</span>
                         <span>$3.00</span>
-                    </p>
+                    </p> --}}
                     <hr>
                     <p class="d-flex total-price">
                         <span>Total</span>
                         <span>$17.60</span>
                     </p>
                 </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                <p><a href="#" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
             </div>
         </div>
     </div>

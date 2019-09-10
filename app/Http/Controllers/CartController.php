@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -21,10 +22,10 @@ class CartController extends Controller
             'email' => 'services@ekemarketonline.com',
             'address' => 'Amangbala Afikpo North Local Government Area'
         );
-
+        $categories=Category::orderBy('name','asc')->get();
         $cartItems=Cart::content();
 
-        return view('cart.index',compact('cartItems'))->with($data);
+        return view('frontend.cart.index',compact('cartItems','categories'))->with($data);
 
     }
 
