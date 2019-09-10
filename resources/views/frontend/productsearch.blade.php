@@ -36,8 +36,9 @@
                         <h3><a href="{{ route('frontend.product.show',$product->id) }}">{{$product->name}}</a></h3>
                         <div class="d-flex">
                             <div class="pricing">
-                                <p class="price"><span class="mr-2 price-dc">&#8358; 100.00</span><span
-                                        class="price-sale">&#8358; {{$product->price}}</span></p>
+                                <p class="price">
+                                    {{-- <span class="mr-2 price-dc">&#8358; 100.00</span> --}}
+                                    <span class="price-sale">&#8358;{{$product->price}}</span></p>
                             </div>
                         </div>
 

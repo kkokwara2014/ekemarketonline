@@ -38,7 +38,7 @@
                         <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                     </p>
                 </div> --}}
-                <div class="price">Unit Price : &#8358; {{$products->price}}</div>
+                <div class="price">Unit Price : &#8358;{{$products->price}}</div>
                 <div>Category : {{$products->category->name}} </div>
                 <div>
                     Description : {{$products->description}}
@@ -61,9 +61,10 @@
 
                 <h6 style="color:black">Buyer : </h6>
                 Do not make payment until this product is supplied to you.
-                <br><br>
+                <br>
+                {{-- <br>
                 <h6 style="color:black">Seller : </h6>
-                Confirm payment before closing the transaction.
+                Confirm payment before closing the transaction. --}}
 
 
 
