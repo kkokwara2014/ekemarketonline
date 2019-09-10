@@ -214,7 +214,7 @@ return [
 
         'Image' => Intervention\Image\Facades\Image::class,
 
-        'Cart' => Gloudemans\Cart\Facades\CartFacade::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 

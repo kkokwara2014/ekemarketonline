@@ -27,7 +27,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="{{ route('index') }}">
-    <img style="margin-top: -5px" src="{{url('bootstrap_assets/images/','ekm_logo.png')}}" alt="logo" width="20px" height="20px">
+      <img style="margin-top: -5px" src="{{url('bootstrap_assets/images/','ekm_logo.png')}}" alt="logo" width="20px"
+        height="20px">
       EkeMarketOnline
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
@@ -43,7 +44,8 @@
           <form action="{{route('search.product')}}" class="subscribe-form" method="POST">
             {{ csrf_field() }}
             <div class="form-group d-flex">
-            <input type="text" name="productname" value="{{old('productname')}}" class="form-control-sm" placeholder="Enter Product name">
+              <input type="text" name="productname" value="{{old('productname')}}" class="form-control-sm"
+                placeholder="Enter Product name">
               <input type="submit" value="Search" class="submit px-2">
             </div>
           </form>
@@ -81,7 +83,9 @@
         <li class="nav-item"><a href="{{ route('contact.create') }}" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
-        <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
+        <li class="nav-item cta cta-colored"><a href="{{route('cart.index')}}" class="nav-link"><span
+              class="icon-shopping_cart"></span>[ {{Cart::count()}} ]</a></li>
 
       </ul>
     </div>

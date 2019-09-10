@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 class CartController extends Controller
 {
     /**
@@ -14,7 +16,16 @@ class CartController extends Controller
      */
     public function index()
     {
-        Cart::content();
+        $data = array(
+            'phone' => '+ 234 813 888 3919',
+            'email' => 'services@ekemarketonline.com',
+            'address' => 'Amangbala Afikpo North Local Government Area'
+        );
+
+        $cartItems=Cart::content();
+
+        return view('cart.index',compact('cartItems'))->with($data);
+
     }
 
     /**
@@ -22,12 +33,8 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($product_id)
-    {
-        $product = Product::find($product_id);
-
-        Cart::add($product_id, $product->name, 1, $product->price);
-    }
+    public function create()
+    { }
 
     /**
      * Store a newly created resource in storage.
@@ -59,7 +66,11 @@ class CartController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+
+        Cart::add($id, $product->name, 1, $product->price);
+
+        return back();
     }
 
     /**
