@@ -52,7 +52,7 @@ Route::resource('/cart', 'CartController');
 Route::resource('/buyer/address', 'BuyeraddressController');
 
 // checkout
-Route::get('checkout','CheckoutController@firststep')->name('checkout');
+Route::get('checkout','CheckoutController@registerbuyer')->name('checkout');
 Route::get('buyer/address','CheckoutController@buyeraddress')->name('buyeraddress');
 
 //product search area

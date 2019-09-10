@@ -153,7 +153,7 @@
                         <span>&#8358;{{Cart::subtotal()}}</span>
                     </p>
                 </div>
-                <p><a href="#" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+            <p><a href="{{route('checkout')}}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
             </div>
         </div>
     </div>
