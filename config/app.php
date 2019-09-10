@@ -162,6 +162,7 @@ return [
 
         Intervention\Image\ImageServiceProvider::class,
 
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
     ],
 
     /*
@@ -210,7 +211,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'Cart' => Gloudemans\Cart\Facades\CartFacade::class,
 
     ],
 

@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 10 2019 12:21:17 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/layout/navbar.blade.php
+
+
+Created files:
+* public/product_images/1568113187.jpg
+
+
+Deleted files:
+
+
+Renamed files:
