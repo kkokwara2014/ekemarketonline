@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
-        <p class="breadcrumbs"><span class="mr-2"><a href="#">Home</a></span> <span>About us</span></p>
+      <p class="breadcrumbs"><span class="mr-2"><a href="{{route('index')}}">Home</a></span> <span>About us</span></p>
         <h1 class="mb-0 bread">About us</h1>
       </div>
     </div>
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="pb-md-5">
-          <p style="text-align: justify">Eke is a major market day in many parts of Igbo land in Nigeria. In a bid to
+          <p style="text-align: justify">Eke is a major market day in many Southern States of Nigeria. In a bid to
             bring buying and selling to a digital perspective, Done-Right Systems Incorporated decided to bring the
             market activities to a click away from your mobile devices and computer related gadgets. <br>
             In view of notable online market security challenges, Done-Right Systems Management has tried to create

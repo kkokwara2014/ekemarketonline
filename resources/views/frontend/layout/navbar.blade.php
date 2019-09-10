@@ -85,7 +85,7 @@
         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
 
         <li class="nav-item cta cta-colored"><a href="{{route('cart.index')}}" class="nav-link"><span
-              class="icon-shopping_cart"></span>[ {{Cart::count()}} ]</a></li>
+              class="icon-shopping_cart"></span>[{{Cart::count()}}]</a></li>
 
       </ul>
     </div>
