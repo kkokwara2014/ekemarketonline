@@ -135,7 +135,7 @@
                     <hr>
                     <p class="d-flex total-price">
                         <span>Total</span>
-                        <span>$17.60</span>
+                        <span>&#8358;{{Cart::total()}}</span>
                     </p>
                 </div>
                 <p><a href="#" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
