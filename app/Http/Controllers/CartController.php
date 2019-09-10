@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -13,7 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        Cart::content();
     }
 
     /**
@@ -21,9 +22,11 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($product_id)
     {
-        //
+        $product = Product::find($product_id);
+
+        Cart::add($product_id, $product->name, 1, $product->price);
     }
 
     /**

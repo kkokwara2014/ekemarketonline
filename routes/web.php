@@ -36,6 +36,8 @@ Route::post('register', 'Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
 Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::get('/', 'FrontController@index')->name('index');
@@ -43,7 +45,10 @@ Route::get('/about', 'FrontController@about')->name('about');
 Route::get('/product/{id}/show', 'FrontController@productSingle')->name('frontend.product.show');
 Route::get('/category/{id}/show', 'FrontController@showprodbycategory')->name('frontend.category.show');
 
+//cart area
+Route::resource('/cart', 'CartController');
 
+//product search area
 Route::post('/search/product', 'SearchController@searchproduct')->name('search.product');
 
 
