@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -31,11 +28,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
 
 
 Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
