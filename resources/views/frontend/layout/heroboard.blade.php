@@ -23,7 +23,7 @@
                         <div class="col-sm-12 ftco-animate text-center">
                             <h1 class="mb-2">Bringing Eke Market closer to you!</h1>
                             <h2 class="subheading mb-4">... delivering your desired products to you.</h2>
-                            <p><a href="#" class="btn btn-primary">Shop Now</a></p>
+                        <p><a href="{{route('index')}}" class="btn btn-primary">Shop Now</a></p>
                         </div>
     
                     </div>

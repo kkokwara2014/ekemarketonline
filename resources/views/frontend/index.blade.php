@@ -12,7 +12,7 @@
 			<div class="col-md-12 heading-section text-center ftco-animate">
 				{{-- <span class="subheading">Featured Products</span> --}}
 				<h2 class="mb-4">Available Products</h2>
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				<p>Affordable and nice products within your reach.</p>
 			</div>
 		</div>
 	</div>
@@ -39,9 +39,9 @@
 						
 					<div class="bottom-area d-flex px-3">
 						<div class="m-auto d-flex">
-						<a href="{{route('cart.edit',$product->id)}}" class="buy-now d-flex justify-content-center align-items-center mx-1">
+						{{-- <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
 								<span><i class="ion-ios-cart" title="Add to Cart"></i></span>
-							</a>
+							</a> --}}
 
 							<a href="{{ route('frontend.product.show',$product->id) }}"
 								class="heart d-flex justify-content-center align-items-center" title="View Details">

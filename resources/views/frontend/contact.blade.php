@@ -1,7 +1,8 @@
 @extends('frontend.layout.main')
 
 @section('content')
-<div class="hero-wrap hero-bread" style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
+<div class="hero-wrap hero-bread"
+  style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
@@ -15,34 +16,21 @@
 
 <section class="ftco-section contact-section bg-light">
   <div class="container">
-    <div class="row d-flex mb-5 contact-info">
-      <div class="w-100"></div>
-      <div class="col-md-4 d-flex">
-        <div class="info bg-white p-4">
-          <p><span>Address:</span> {{$address}}</p>
-        </div>
-      </div>
-      <div class="col-md-4 d-flex">
-        <div class="info bg-white p-4">
-          <p><span>Phone:</span> <a href="tel:{{$phone}}">{{$phone}}</a></p>
-        </div>
-      </div>
-      <div class="col-md-4 d-flex">
-        <div class="info bg-white p-4">
-          <p><span>Email:</span> <a href="{{$email}}">{{$email}}</a></p>
-        </div>
-      </div>
 
-    </div>
-    <div class="row block-9">
-      
-      <div class="col-md-6 order-md-last d-flex contact-form">
+    {{-- block-9 --}}
+    <div class="row">
+      {{-- order-md-last --}}
+      <div class="col-md-7 d-flex contact-form">
+        @if (session('success'))
+        <p class="alert alert-success">{{ session('success') }}</p>
+        @endif
+
         <form action="{{ route('contact.store') }}" class="bg-white p-5" method="POST">
           {{ csrf_field() }}
 
 
           <div class="form-group">
-            <input type="text" name="sender" class="form-control" placeholder="Your Name">
+            <input type="text" name="sender" class="form-control" placeholder="Your Name" autofocus>
           </div>
           <div class="form-group">
             <input type="email" name="email" class="form-control" placeholder="Your Email">
@@ -61,8 +49,8 @@
 
       </div>
 
-      <div class="col-md-6 d-flex">
-        <div id="map" class="bg-white"></div>
+      <div class="col-md-5 d-flex">
+
       </div>
     </div>
   </div>

@@ -34,7 +34,7 @@ Route::post('register', 'Auth\RegisterController@register');
 
 // Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 
 
@@ -46,14 +46,14 @@ Route::get('/product/{id}/show', 'FrontController@productSingle')->name('fronten
 Route::get('/category/{id}/show', 'FrontController@showprodbycategory')->name('frontend.category.show');
 
 //cart area
-Route::resource('/cart', 'CartController');
+// Route::resource('/cart', 'CartController');
 
 //Buyer Address
-Route::resource('/buyer/address', 'BuyeraddressController');
+// Route::resource('/buyer/address', 'BuyeraddressController');
 
 // checkout
-Route::get('checkout','CheckoutController@registerbuyer')->name('checkout');
-Route::get('buyer/address','CheckoutController@buyeraddress')->name('buyeraddress');
+// Route::get('checkout','CheckoutController@registerbuyer')->name('checkout');
+// Route::get('buyer/address','CheckoutController@buyeraddress')->name('buyeraddress');
 
 //product search area
 Route::post('/search/product', 'SearchController@searchproduct')->name('search.product');

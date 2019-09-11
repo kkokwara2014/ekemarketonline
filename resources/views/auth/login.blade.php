@@ -5,9 +5,8 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="{{route('index')}}">Home</a></span> <span>Sign
-                        In</span></p>
-                <h1 class="mb-0 bread">Sign In</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{{route('index')}}">Home</a></span> <span>Login</span></p>
+                <h1 class="mb-0 bread">Login</h1>
             </div>
         </div>
     </div>
