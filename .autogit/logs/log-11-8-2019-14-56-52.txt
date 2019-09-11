@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 11 2019 14:56:52 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/LoginController.php
+* resources/lang/en/auth.php
+* resources/views/auth/login.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-8-2019-14-26-30.txt
+
+
+Deleted files:
+
+
+Renamed files:
