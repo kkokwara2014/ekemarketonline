@@ -22,43 +22,53 @@ class AdminController extends Controller
 
         $user = Auth::user();
 
-        $allCategories=Category::count();
-        $allShops=Shop::count();
-        $allSubscriptions=Subscription::count();
-        $allProducts=Product::count();
-        $allShopOwners=User::where('role_id',2)->count();
-        $allAdmins=User::where('role_id',1)->count();
+        $allCategories = Category::count();
+        $allShops = Shop::count();
+        $allSubscriptions = Subscription::count();
+        $allProducts = Product::count();
+        $allShopOwners = User::where('role_id', 2)->count();
+        $allAdmins = User::where('role_id', 1)->count();
 
-        return view('admin.index', compact('user','allCategories','allShops','allSubscriptions','allProducts','allShopOwners','allAdmins'));
+        return view('admin.index', compact('user', 'allCategories', 'allShops', 'allSubscriptions', 'allProducts', 'allShopOwners', 'allAdmins'));
     }
 
     public function admins()
     {
-        $admins = User::where('role_id', 1)->get();
-        return view('admin.admins.index', array('user' => Auth::user()), compact('admins'));
+        
+            $admins = User::where('role_id', 1)->get();
+            return view('admin.admins.index', array('user' => Auth::user()), compact('admins'));
+        
     }
     public function show($id)
     {
-        $admins = User::find($id);
-        return view('admin.admins.show', array('user' => Auth::user()), compact('admins'));
+       
+
+            $admins = User::find($id);
+            return view('admin.admins.show', array('user' => Auth::user()), compact('admins'));
+      
     }
     public function activate($id)
     {
 
-        $admin = User::find($id);
-        $admin->isactive = '1';
-        $admin->save();
+       
 
-        return redirect(route('admins.all'));
+            $admin = User::find($id);
+            $admin->isactive = '1';
+            $admin->save();
+    
+            return redirect(route('admins.all'));
+        
     }
     public function deactivate($id)
     {
+        
 
-        $admin = User::find($id);
-        $admin->isactive = '0';
-        $admin->save();
-
-        return redirect(route('admins.all'));
+            $admin = User::find($id);
+            $admin->isactive = '0';
+            $admin->save();
+    
+            return redirect(route('admins.all'));
+        
     }
 
     /**
@@ -79,26 +89,29 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'lastname' => 'required|string',
-            'firstname' => 'required|string',
-            'email' => 'required|email|unique:users',
-            'phone' => 'required',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+        
 
-        $user = new User;
-        $user->lastname = $request->lastname;
-        $user->firstname = $request->firstname;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->password = bcrypt($request->password);
-        $user->role_id = $request->role_id;
-        $user->isactive = '1';
-
-        $user->save();
-
-        return redirect(route('admins.all'))->with('success', 'Admin created successfully!');
+            $this->validate($request, [
+                'lastname' => 'required|string',
+                'firstname' => 'required|string',
+                'email' => 'required|email|unique:users',
+                'phone' => 'required',
+                'password' => 'required|string|min:6|confirmed',
+            ]);
+    
+            $user = new User;
+            $user->lastname = $request->lastname;
+            $user->firstname = $request->firstname;
+            $user->email = $request->email;
+            $user->phone = $request->phone;
+            $user->password = bcrypt($request->password);
+            $user->role_id = $request->role_id;
+            $user->isactive = '1';
+    
+            $user->save();
+    
+            return redirect(route('admins.all'))->with('success', 'Admin created successfully!');
+        
     }
 
 
