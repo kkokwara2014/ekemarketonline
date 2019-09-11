@@ -75,19 +75,17 @@ class LoginController extends Controller
         // Check if user was successfully loaded, that the password matches
         // and active is not 1. If so, override the default error message.
         if ($user && \Hash::check($request->password, $user->password) && $user->isactive != 1) {
-            // $errors = [$this->username() => trans('auth.notactivated')];
-            // $errors = trans('auth.notactivated');
-            return redirect()->back()->with('error', 'Your account has not been activated yet! Contact Admin.')
-                ->withInput($request->only($this->username(), 'remember'));
-                // ->withErrors($errors)
+            $errors = [$this->username() => trans('auth.notactivated')];
+           
         }
 
-        // if ($request->expectsJson()) {
-        //     return response()->json($errors, 422);
-        // }
-        // return redirect()->back()
-        //     ->withInput($request->only($this->username(), 'remember'))
-        //     ->withErrors($errors);
+        
+        if ($request->expectsJson()) {
+            return response()->json($errors, 422);
+        }
+       
+        return redirect()->back()->withInput($request->only($this->username(), 'remember'))
+            ->withErrors($errors);
     }
 
 
