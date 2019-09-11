@@ -28,8 +28,9 @@
                                     <th>Subscri. Date</th>
                                     <th>Amount</th>
                                     <th>Created</th>
-                                   
+                                    @if (Auth::user()->role->id==1)
                                     <th>Download</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,15 +39,21 @@
 
                                 <tr>
 
-                                    <td>{{strtoupper($subscriber->user->lastname).', '.$subscriber->user->firstname}}</td>
+                                    <td>{{strtoupper($subscriber->user->lastname).', '.$subscriber->user->firstname}}
+                                    </td>
                                     <td>{{$subscriber->user->email}}</td>
                                     <td>{{$subscriber->user->phone}}</td>
                                     <td>{{$subscriber->subscriptionyear}}</td>
                                     <td>&#8358;{{$subscriber->amount}}</td>
                                     <td>{{$subscriber->created_at->diffForHumans()}}</td>
-                                    <td><a href="#" class="btn btn-success btn-sm btn-block"><span class="fa fa-download"></span> Download</a></td>
-                                    
-                                    
+
+                                    @if (Auth::user()->role->id==1)
+                                    <td><a href="#" class="btn btn-success btn-sm btn-block"><span
+                                                class="fa fa-download"></span> Download</a></td>
+
+                                    @endif
+
+
                                 </tr>
 
                                 @endif
@@ -54,14 +61,15 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Subscri. Date</th>
-                                        <th>Amount</th>
-                                        <th>Created</th>
-                                       
-                                        <th>Download</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Subscri. Date</th>
+                                    <th>Amount</th>
+                                    <th>Created</th>
+                                    @if (Auth::user()->role->id==1)
+                                    <th>Download</th>
+                                    @endif
                                 </tr>
                             </tfoot>
                         </table>
@@ -97,9 +105,9 @@
                                 <input type="text" class="form-control" name="amount" placeholder="Subscription Amount"
                                     maxlength="6">
                             </div>
-                            
-                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                            
+
+                            {{-- <input type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
+
                             <div>
                                 <label for="">Upload Subscription Evidence</label>
                                 <input type="file" name="imageevidence">

@@ -46,7 +46,9 @@ class ShopController extends Controller
             'user_id'=>'required',
         ]);
 
+       
         Shop::create($request->all());
+       
 
         return back();
     }

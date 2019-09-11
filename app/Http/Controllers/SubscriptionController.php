@@ -57,7 +57,7 @@ class SubscriptionController extends Controller
         $subscriber->subscriptionyear= $request->subscriptionyear;
         $subscriber->amount= $request->amount;
         $subscriber->imageevidence= $formInput['imageevidence'];
-        $subscriber->user_id= $request->user_id;
+        $subscriber->user_id= Auth::user()->id;
         
         $subscriber->save();
         
