@@ -12,6 +12,10 @@ use App\Subscription;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except(['index']);    
+    }
     /**
      * Display a listing of the resource.
      *

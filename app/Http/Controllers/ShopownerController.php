@@ -8,7 +8,11 @@ use Auth;
 
 class ShopownerController extends Controller
 {
-    
+    public function __construct()
+    {
+        $this->middleware('admin');    
+    }
+
     public function shopowners(){
        
         
