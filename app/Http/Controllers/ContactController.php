@@ -6,8 +6,16 @@ use App\Category;
 use App\Contact;
 use Illuminate\Http\Request;
 
+use Auth;
+
 class ContactController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('admin')->except(['create','store']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +25,7 @@ class ContactController extends Controller
     { 
         $contacts=Contact::orderBy('created_at','desc')->get();
 
-        return view('admin.contact.index',compact('contacts'));
+        return view('admin.contact.index', array('user' => Auth::user()),compact('contacts'));
     }
 
     /**
@@ -98,6 +106,7 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contacts=Contact::where('id',$id)->delete();
+        return redirect()->back();
     }
 }

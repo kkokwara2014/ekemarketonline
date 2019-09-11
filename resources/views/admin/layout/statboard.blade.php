@@ -7,12 +7,12 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-          <h3>{{$allCategories}}</h3>
+          <h3>{{$allContacts}}</h3>
 
-            <p>Categories</p>
+            <p>Contacts</p>
           </div>
           <div class="icon">
-            <i class="fa fa-th"></i>
+            <i class="fa fa-envelope"></i>
           </div>
           
         </div>

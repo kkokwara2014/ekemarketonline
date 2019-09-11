@@ -29,7 +29,6 @@
         <form action="{{ route('contact.store') }}" class="bg-white p-5" method="POST">
           {{ csrf_field() }}
 
-
           <div class="form-group">
             <input type="text" name="sender" class="form-control" placeholder="Your Name" autofocus>
           </div>

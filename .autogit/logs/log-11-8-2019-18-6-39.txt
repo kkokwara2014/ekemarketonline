@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 11 2019 18:06:39 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* resources/views/admin/layout/sidebar.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-8-2019-17-36-27.txt
+* resources/views/admin/contact/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

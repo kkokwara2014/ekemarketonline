@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Category;
+use App\Contact;
 use App\Product;
 use App\Shop;
 use App\Subscription;
@@ -26,6 +27,8 @@ class AdminController extends Controller
 
         $user = Auth::user();
 
+        $allContacts=Contact::count();
+
         $allCategories = Category::count();
         $allShops = Shop::count();
         $allSubscriptions = Subscription::count();
@@ -33,7 +36,7 @@ class AdminController extends Controller
         $allShopOwners = User::where('role_id', 2)->count();
         $allAdmins = User::where('role_id', 1)->count();
 
-        return view('admin.index', compact('user', 'allCategories', 'allShops', 'allSubscriptions', 'allProducts', 'allShopOwners', 'allAdmins'));
+        return view('admin.index', compact('user','allContacts', 'allCategories', 'allShops', 'allSubscriptions', 'allProducts', 'allShopOwners', 'allAdmins'));
     }
 
     public function admins()
