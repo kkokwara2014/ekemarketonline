@@ -201,6 +201,7 @@
                             </div>
 
                             <input type="hidden" name="role_id" value="1">
+                            <input type="hidden" name="isactive" value="1">
 
                         </div>
                         <div class="modal-footer">

@@ -100,7 +100,7 @@ class RegisterController extends Controller
         $user->phone=$request->phone;
         $user->password=bcrypt($request->password);
         $user->role_id=$request->role_id;
-        $user->isactive='0';
+        $user->isactive=$request->isactive;
 
         $user->save();
         
