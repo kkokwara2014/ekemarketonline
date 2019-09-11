@@ -20,10 +20,11 @@
     {{-- block-9 --}}
     <div class="row">
       {{-- order-md-last --}}
-      <div class="col-md-7 d-flex contact-form">
-        @if (session('success'))
-        <p class="alert alert-success">{{ session('success') }}</p>
-        @endif
+      {{-- d-flex --}}
+      <div class="col-md-7  contact-form">
+          @if (session('success'))
+          <p class="alert alert-success">{{ session('success') }}</p>
+          @endif
 
         <form action="{{ route('contact.store') }}" class="bg-white p-5" method="POST">
           {{ csrf_field() }}

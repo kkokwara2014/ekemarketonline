@@ -104,7 +104,7 @@ class RegisterController extends Controller
 
         $user->save();
         
-        return redirect(route('register'))->with('success','Account has been created successfully!');
+        return redirect(route('register'))->with('success','Your account has been created and will be activated shortly!');
     }
 
 }

@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 11 2019 13:06:08 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/auth/login.blade.php
+* resources/views/auth/register.blade.php
+* resources/views/frontend/contact.blade.php
+* resources/views/frontend/index.blade.php
+* resources/views/frontend/layout/heroboard.blade.php
+* resources/views/frontend/layout/navbar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-11-8-2019-12-35-21.txt
+
+
+Deleted files:
+
+
+Renamed files:
