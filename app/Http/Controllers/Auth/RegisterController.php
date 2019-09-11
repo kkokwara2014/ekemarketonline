@@ -104,7 +104,10 @@ class RegisterController extends Controller
 
         $user->save();
         
-        return redirect(route('register'))->with('success','Your account has been created and will be activated shortly!');
+        return redirect(route('login'))->with('success','Your account has been created and will be activated shortly!');
+
+    //         return response()->view('view', compact('data'), 200)
+    //  ->header("Refresh", "5;url=/profile");
     }
 
 }

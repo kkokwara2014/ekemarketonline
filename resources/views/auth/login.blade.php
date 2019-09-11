@@ -18,12 +18,16 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
+                {{-- for messages --}}
+                @if (session('success'))
+                <p class="alert alert-success">{{ session('success') }}</p>
+                @endif
                 <form action="{{ route('login') }}" class="bg-white p-5" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <input id="email" type="email"
                             class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                            value="{{ old('email') }}" required autofocus placeholder="Email">
+                            value="{{ old('email') }}" autofocus placeholder="Email">
 
                         @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
@@ -34,7 +38,7 @@
                     <div class="form-group">
                         <input id="password" type="password"
                             class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"
-                            required placeholder="Password">
+                            placeholder="Password">
 
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
