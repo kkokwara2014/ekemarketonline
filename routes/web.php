@@ -59,8 +59,8 @@ Route::get('/category/{id}/show', 'FrontController@showprodbycategory')->name('f
 Route::post('/search/product', 'SearchController@searchproduct')->name('search.product');
 
 
-Route::get('contact/create','ContactController@create')->name('contact.create');
-Route::post('contact/create','ContactController@store')->name('contact.store');
+Route::get('contact','ContactController@create')->name('contact.create');
+Route::post('contact','ContactController@store')->name('contact.store');
 
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
@@ -74,7 +74,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
 
 
     Route::get('contact','ContactController@index')->name('contact.index');
-    Route::post('contact/{id}','ContactController@destroy')->name('contact.destroy');
+    Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 
     Route::resource('category','CategoryController');
     Route::resource('shop','ShopController');
