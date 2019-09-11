@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 11 2019 17:36:27 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/AdminController.php
+* app/Http/Controllers/CategoryController.php
+* app/Http/Controllers/ShopownerController.php
+* app/Http/Kernel.php
+
+
+Created files:
+* .autogit/logs/log-11-8-2019-17-6-13.txt
+* app/Http/Middleware/AdminMiddleware.php
+
+
+Deleted files:
+
+
+Renamed files:
