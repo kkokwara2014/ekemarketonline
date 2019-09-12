@@ -2,9 +2,17 @@
 
 @section('content')
 
-@include('frontend.layout.heroboard')
-
-
+<div class="hero-wrap hero-bread"
+  style="background-image: url({{asset('bootstrap_assets/images/ekemarketpages.jpg')}});">
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+      <p class="breadcrumbs"><span class="mr-2"><a href="{{route('index')}}">Home</a></span> <span>Product Search</span></p>
+        <h1 class="mb-0 bread">Product Search</h1>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="ftco-section">
     <div class="container">
@@ -43,9 +51,9 @@
 
                         <div class="bottom-area d-flex px-3">
                             <div class="m-auto d-flex">
-                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                {{-- <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                     <span><i class="ion-ios-cart" title="Add to Cart"></i></span>
-                                </a>
+                                </a> --}}
 
                                 <a href="{{ route('frontend.product.show',$product->id) }}"
                                     class="heart d-flex justify-content-center align-items-center" title="View Details">
