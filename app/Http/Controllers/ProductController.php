@@ -46,7 +46,7 @@ class ProductController extends Controller
         $formInput=$request->except('image');
         $this->validate($request,[
             'name'=>'required|string',
-            'price'=>'required',
+            'price'=>'required|string',
             'description'=>'required|string',
             'shop_id'=>'required',
             'category_id'=>'required',

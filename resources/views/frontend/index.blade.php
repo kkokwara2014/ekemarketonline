@@ -20,6 +20,8 @@
 		<div class="row">
 			@forelse ($products->chunk(4) as $chunk)
 			@foreach ($chunk as $product)
+
+			@if ($product->shop->user->isactive==1)
 			<div class="col-md-6 col-lg-3 ftco-animate">
 				<div class="product">
 					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid"
@@ -33,7 +35,7 @@
 							<div class="pricing">
 								<p class="price">
 									{{-- <span class="mr-2 price-dc">&#8358; 100.00</span> --}}
-									<span class="price-sale">&#8358;{{$product->price}}</span></p>
+									<span class="price-sale">&#8358;{{number_format((float)$product->price,2,'.','')}}</span></p>
 							</div>
 						</div>
 						
@@ -51,16 +53,15 @@
 					</div>
 				</div>
 			</div>
+				
+			@endif
 		</div>
 
 		@endforeach
 		@empty
 		<p class="alert alert-info">No Product has been added!</p>
 		@endforelse
-
-
 	</div>
-
 	<p style="text-align: right; color: green;">{{$products->links()}}</p>
 	</div>
 </section>
