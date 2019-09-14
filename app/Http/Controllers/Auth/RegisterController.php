@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 
+use Twilio\Rest\Client;
+
 class RegisterController extends Controller
 {
     /*
@@ -73,41 +75,52 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showRegistrationForm(){
-        $categories=Category::orderBy('name','asc')->get();
-        $data=array(
-            'phone'=>'+ 234 813 888 3919',
-            'email'=>'services@ekemarketonline.com',
-            'address'=>'Amangbala Afikpo North Local Government Area'
+    public function showRegistrationForm()
+    {
+        $categories = Category::orderBy('name', 'asc')->get();
+        $data = array(
+            'phone' => '+ 234 813 888 3919',
+            'email' => 'services@ekemarketonline.com',
+            'address' => 'Amangbala Afikpo North Local Government Area'
         );
-        return view('auth.register',compact('categories'))->with($data);
+        return view('auth.register', compact('categories'))->with($data);
     }
 
     public function register(Request $request)
     {
-        $this->validate($request,[
-            'lastname'=>'required|string',
-            'firstname'=>'required|string',
-            'email'=>'required|email|unique:users',
+        $sid    = env('TWILIO_SID');
+        $token  = env('TWILIO_TOKEN');
+        $client = new Client($sid, $token);
+
+        $this->validate($request, [
+            'lastname' => 'required|string',
+            'firstname' => 'required|string',
+            'email' => 'required|email|unique:users',
             'phone' => 'required',
             'password' => 'required|string|min:6|confirmed',
         ]);
 
-        $user=new User;
-        $user->lastname=$request->lastname;
-        $user->firstname=$request->firstname;
-        $user->email=$request->email;
-        $user->phone=$request->phone;
-        $user->password=bcrypt($request->password);
-        $user->role_id=$request->role_id;
-        $user->isactive=$request->isactive;
+        $user = new User;
+        $user->lastname = $request->lastname;
+        $user->firstname = $request->firstname;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = bcrypt($request->password);
+        $user->role_id = $request->role_id;
+        $user->isactive = $request->isactive;
 
         $user->save();
-        
-        return redirect(route('login'))->with('success','Your account has been created and will be activated shortly!');
 
-    //         return response()->view('view', compact('data'), 200)
-    //  ->header("Refresh", "5;url=/profile");
+        $client->messages->create(
+            $request->phone,
+            [
+                'from' => env('TWILIO_FROM'),
+                'body' => 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
+                            Thank you.',
+            ]
+        );
+
+        return redirect(route('login'))->with('success', 'Your account has been created and will be activated shortly!');
+
     }
-
 }
