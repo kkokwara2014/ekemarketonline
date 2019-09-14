@@ -163,6 +163,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+
+        Aloha\Twilio\Support\Laravel\ServiceProvider::class,
     ],
 
     /*
@@ -215,6 +217,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
+        'Twilio' => Aloha\Twilio\Support\Laravel\Facade::class,
 
     ],
 

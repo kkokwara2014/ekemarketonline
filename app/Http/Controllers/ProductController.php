@@ -61,6 +61,8 @@ class ProductController extends Controller
             $formInput['image']=$imageName;
         }
 
+        $price=explode(',',$request->price);
+
         Product::create($formInput);
 
         return redirect()->route('product.index');
