@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 14 2019 07:21:31 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/FrontController.php
+* resources/views/auth/register.blade.php
+* resources/views/frontend/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-8-2019-20-7-24.txt
+
+
+Deleted files:
+
+
+Renamed files:
