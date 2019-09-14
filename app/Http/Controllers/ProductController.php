@@ -61,9 +61,19 @@ class ProductController extends Controller
             $formInput['image']=$imageName;
         }
 
-        $price=explode(',',$request->price);
+        // $price=explode(',',$request->price);
 
-        Product::create($formInput);
+        // Product::create($formInput);
+        // str_replace(array('[',']'), '',$widget_text)
+        $product=new Product;
+        $product->name=$request->name;
+        $product->price=str_replace(array(','),'',$request->price);
+        $product->description=$request->description;
+        $product->shop_id=$request->shop_id;
+        $product->category_id=$request->category_id;
+        $product->image=$formInput['image'];
+
+        $product->save();
 
         return redirect()->route('product.index');
     }

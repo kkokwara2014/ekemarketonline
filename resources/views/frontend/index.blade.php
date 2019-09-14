@@ -36,7 +36,7 @@
 								<span class="price">
 									{{-- <span class="mr-2 price-dc">&#8358; 100.00</span> --}}
 									{{-- <span class="price-sale">&#8358;{{sprintf("%0.2f", $product->price)}}</span></span> --}}
-									<span class="price-sale">&#8358;{{$product->price}}</span></p>
+									<span class="price-sale">&#8358;{{ number_format($product->price,2) }}</span></p>
 							</div>
 						</div>
 						
