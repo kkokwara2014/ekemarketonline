@@ -23,7 +23,7 @@
             <div class="col-lg-7 product-details pl-md-5 ftco-animate">
                 <h3>{{$products->name}}</h3>
                 
-                <div class="price">Unit Price : &#8358;{{$products->price}}</div>
+                <div class="price">Unit Price : &#8358;{{ number_format($products->price,2) }}</div>
                 <div>Category : {{$products->category->name}} </div>
                 <div>
                     Description : {{$products->description}}
