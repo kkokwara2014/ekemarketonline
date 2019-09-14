@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <input id="phone" type="tel"
                             class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone"
-                            value="{{ old('phone') }}" required placeholder="Phone" maxlength="11">
+                            value="{{ old('phone') }}" required placeholder="Phone" maxlength="14">
 
                         @if ($errors->has('phone'))
                         <span class="invalid-feedback" role="alert">

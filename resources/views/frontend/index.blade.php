@@ -18,11 +18,11 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			@forelse ($products->chunk(4) as $chunk)
+			@forelse ($products->chunk(6) as $chunk)
 			@foreach ($chunk as $product)
 
 			@if ($product->shop->user->isactive==1)
-			<div class="col-md-6 col-lg-3 ftco-animate">
+			<div class="col-md-2 ftco-animate">
 				<div class="product">
 					<a href="{{ route('frontend.product.show',$product->id) }}" class="img-prod"><img class="img-fluid"
 							src="{{url('product_images',$product->image)}}">
@@ -35,7 +35,7 @@
 							<div class="pricing">
 								<p class="price">
 									{{-- <span class="mr-2 price-dc">&#8358; 100.00</span> --}}
-									<span class="price-sale">&#8358;{{number_format((float)$product->price,2,'.','')}}</span></p>
+									<span class="price-sale">&#8358;{{sprintf("%0.2f", $product->price)}}</span></p>
 							</div>
 						</div>
 						

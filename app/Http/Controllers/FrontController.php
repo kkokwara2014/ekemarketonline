@@ -11,7 +11,7 @@ class FrontController extends Controller
    
     public function index(){
         $categories=Category::orderBy('name','asc')->get();
-        $products=Product::orderBy('created_at','desc')->paginate(20);
+        $products=Product::orderBy('created_at','desc')->paginate(90);
         $data=array(
             'phone'=>'+ 234 813 888 3919',
             'email'=>'services@ekemarketonline.com',
