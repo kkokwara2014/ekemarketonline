@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 14 2019 14:10:08 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* public/bootstrap_assets/images/about.jpg
+
+
+Created files:
+* public/bootstrap_assets/images/about_main.jpg
+
+
+Deleted files:
+
+
+Renamed files:
