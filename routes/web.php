@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/sitemap', function(){
+
+    SitemapGenerator::create('')->writeToFile('sitemap.xml');
+
+    return 'Sitemap generated!';
+});
+
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
