@@ -1,5 +1,7 @@
 <?php
 
+use Spatie\Sitemap\SitemapGenerator;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/sitemap', function(){
+Route::get('sitemap', function(){
 
-    SitemapGenerator::create('')->writeToFile('sitemap.xml');
+    SitemapGenerator::create('http://ekemarketonline/')->writeToFile('sitemap.xml');
 
     return 'Sitemap generated!';
 });
