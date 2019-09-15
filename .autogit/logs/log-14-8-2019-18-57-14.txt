@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 14 2019 18:57:14 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/frontend/product.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
