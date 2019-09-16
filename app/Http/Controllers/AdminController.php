@@ -48,17 +48,12 @@ class AdminController extends Controller
     }
     public function show($id)
     {
-       
-
             $admins = User::find($id);
             return view('admin.admins.show', array('user' => Auth::user()), compact('admins'));
       
     }
     public function activate($id)
     {
-
-       
-
             $admin = User::find($id);
             $admin->isactive = '1';
             $admin->save();
