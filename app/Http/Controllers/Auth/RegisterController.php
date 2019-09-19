@@ -121,6 +121,5 @@ class RegisterController extends Controller
         );
 
         return redirect(route('login'))->with('success', 'Your account has been created and will be activated shortly!');
-
     }
 }
