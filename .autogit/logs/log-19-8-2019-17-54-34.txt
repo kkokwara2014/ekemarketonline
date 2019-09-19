@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Sep 19 2019 17:54:34 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-19-8-2019-17-23-1.txt
+
+
+Deleted files:
+
+
+Renamed files:
