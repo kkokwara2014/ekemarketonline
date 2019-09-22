@@ -64,7 +64,6 @@ class AdminController extends Controller
     public function deactivate($id)
     {
         
-
             $admin = User::find($id);
             $admin->isactive = '0';
             $admin->save();
