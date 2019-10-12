@@ -38,7 +38,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-
 Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::get('/', 'FrontController@index')->name('index');
