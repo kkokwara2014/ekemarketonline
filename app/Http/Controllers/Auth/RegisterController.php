@@ -88,9 +88,9 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        $sid    = env('TWILIO_SID');
-        $token  = env('TWILIO_TOKEN');
-        $client = new Client($sid, $token);
+        // $sid    = env('TWILIO_SID');
+        // $token  = env('TWILIO_TOKEN');
+        // $client = new Client($sid, $token);
 
         $this->validate($request, [
             'lastname' => 'required|string',
@@ -111,15 +111,32 @@ class RegisterController extends Controller
 
         $user->save();
 
-        $client->messages->create(
-            $request->phone,
-            [
-                'from' => env('TWILIO_FROM'),
-                'body' => 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
-                            Thank you.',
-            ]
-        );
+        $from='Ekemarketonline';
+        $recipient_phone = $request->phone;
+        $message_to_recipient = 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
+                             Thank you.';
+
+
+
+        // $client->messages->create(
+        //     $request->phone,
+        //     [
+        //         'from' => env('TWILIO_FROM'),
+        //         'body' => 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
+        //                     Thank you.',
+        //     ]
+        // );
+
+
+        $this->sendsms($from,$recipient_phone, $message_to_recipient);
+
+
 
         return redirect(route('login'))->with('success', 'Your account has been created and will be activated shortly!');
+    }
+
+    public function sendsms($from,$recipient_phone, $message_to_recipient)
+    {
+        angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password = @Victorkk78 & sender =$from & recipient = $recipient_phone & message = $message_to_recipient
     }
 }
