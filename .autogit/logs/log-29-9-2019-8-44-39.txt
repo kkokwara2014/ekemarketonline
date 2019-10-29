@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Oct 29 2019 08:44:39 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/RegisterController.php
+
+
+Created files:
+* .autogit/logs/log-29-9-2019-8-14-22.txt
+
+
+Deleted files:
+
+
+Renamed files:

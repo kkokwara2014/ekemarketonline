@@ -113,7 +113,7 @@ class RegisterController extends Controller
 
         $from='Ekemarketonline';
         $recipient_phone = $request->phone;
-        $message_to_recipient = 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
+        $message_to_recipient = 'You have registered as a Shop Owner. Your account will be activated shortly.\n
                              Thank you.';
 
 
@@ -137,6 +137,6 @@ class RegisterController extends Controller
 
     public function sendsms($from,$recipient_phone, $message_to_recipient)
     {
-        angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password = @Victorkk78 & sender =$from & recipient = $recipient_phone & message = $message_to_recipient
+        file('https://angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password=@Victorkk78 & sender ='.$from.'& recipient ='.$recipient_phone.'& message ='.$message_to_recipient);        
     }
 }
