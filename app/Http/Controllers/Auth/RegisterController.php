@@ -137,6 +137,7 @@ class RegisterController extends Controller
 
     public function sendsms($from,$recipient_phone, $message_to_recipient)
     {
-        file('https://angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password=@Victorkk78 & sender ='.$from.'& recipient ='.$recipient_phone.'& message ='.$message_to_recipient);        
+        $password='@Victorkk78';
+        file('https://angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password='.$password.' & sender ='.$from.'& recipient ='.$recipient_phone.'& message ='.$message_to_recipient);        
     }
 }
