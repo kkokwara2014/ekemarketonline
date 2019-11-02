@@ -127,17 +127,22 @@ class RegisterController extends Controller
         //     ]
         // );
 
+        $message=urlencode("You have been registered");
+        $sender=urlencode("Ekemarket");
+        $recipient=urlencode($request->phone);
 
-        $this->sendsms($from,$recipient_phone, $message_to_recipient);
-
-
+        $this->sendsms($recipient,$sender, $message);
 
         return redirect(route('login'))->with('success', 'Your account has been created and will be activated shortly!');
     }
 
-    public function sendsms($from,$recipient_phone, $message_to_recipient)
+    public function sendsms($recipient,$sender, $message)
     {
-        $password='@Victorkk78';
-        file('https://angelicsms.com/index.php?option=com_spc&comm=spc_api&username=kkokwara2014&password='.$password.' & sender ='.$from.'& recipient ='.$recipient_phone.'& message ='.$message_to_recipient);        
+        $message=$message;
+        $sender=$sender;
+        $recipient=$recipient;
+        $api_username="kkokwara2014";
+        $api_password="@Victorkk78";
+        file('https://angelicsms.com/index.php?option=com_spc&comm=spc_api&username='.$api_username.'&password='.$api_password.'&sender='.$sender.'&recipient='.$recipient.'&message='.$message.'');        
     }
 }
