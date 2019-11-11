@@ -111,13 +111,7 @@ class RegisterController extends Controller
 
         $user->save();
 
-        $from='Ekemarketonline';
-        $recipient_phone = $request->phone;
-        $message_to_recipient = 'You have registered as a Shop Owner. Your account will be activated shortly.\n
-                             Thank you.';
-
-
-
+        
         // $client->messages->create(
         //     $request->phone,
         //     [
@@ -127,7 +121,7 @@ class RegisterController extends Controller
         //     ]
         // );
 
-        $message=urlencode("Congratulatuions! Your account has been created successfully and will be activated shortly. Thank you for joining www.ekemarketonline.com");
+        $message=urlencode("Your account has been created successfully and you will be communicated shortly. \nThanks for joining www.ekemarketonline.com");
         $sender=urlencode("Ekemarket");
         $recipient=urlencode($request->phone);
 
