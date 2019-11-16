@@ -121,7 +121,7 @@ class RegisterController extends Controller
         //     ]
         // );
 
-        $message=urlencode("Your account has been created successfully and you will be communicated shortly. \nThanks for joining www.ekemarketonline.com");
+        $message=urlencode("Your account has been created successfully and you will be communicated shortly. <br/>Kindly visit www.ekemarketonline.com for more details. <br/>For enquiries, call 08038883919. <br/> Ekemarketonline Team");
         $sender=urlencode("Ekemarket");
         $recipient=urlencode($request->phone);
 
