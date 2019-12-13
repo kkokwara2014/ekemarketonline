@@ -90,8 +90,6 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        
-
             $this->validate($request, [
                 'lastname' => 'required|string',
                 'firstname' => 'required|string',
