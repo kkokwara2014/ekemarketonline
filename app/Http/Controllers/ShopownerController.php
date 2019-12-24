@@ -40,8 +40,6 @@ class ShopownerController extends Controller
     }
     public function deactivate($id){
 
-       
-        
             $shopowner=User::find($id);
             $shopowner->isactive='0';
             $shopowner->save();
