@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 25 2019 08:39:52 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-25-11-2019-8-9-47.txt
+
+
+Deleted files:
+
+
+Renamed files:
