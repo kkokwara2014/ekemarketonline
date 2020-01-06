@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jan 05 2020 10:22:58 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-5-0-2020-9-52-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
