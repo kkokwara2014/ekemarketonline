@@ -88,10 +88,7 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        // $sid    = env('TWILIO_SID');
-        // $token  = env('TWILIO_TOKEN');
-        // $client = new Client($sid, $token);
-
+        
         $this->validate($request, [
             'lastname' => 'required|string',
             'firstname' => 'required|string',
@@ -110,16 +107,6 @@ class RegisterController extends Controller
         $user->isactive = $request->isactive;
 
         $user->save();
-
-        
-        // $client->messages->create(
-        //     $request->phone,
-        //     [
-        //         'from' => env('TWILIO_FROM'),
-        //         'body' => 'You have registered as a Shop Owner on Ekemarketonline.com. Your account will be activated shortly.\n
-        //                     Thank you.',
-        //     ]
-        // );
 
         $message=urlencode("Your account has been created successfully and you will be communicated shortly. <br/>Kindly visit www.ekemarketonline.com for more details. <br/>For enquiries, call 08038883919. <br/> Ekemarketonline Team");
         $sender=urlencode("Ekemarket");
