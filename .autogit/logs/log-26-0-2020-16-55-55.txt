@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jan 26 2020 16:55:55 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/RegisterController.php
+
+
+Created files:
+* .autogit/logs/log-26-0-2020-16-24-21.txt
+
+
+Deleted files:
+
+
+Renamed files:
